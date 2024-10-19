@@ -10,6 +10,7 @@ import DataAccess
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
+    @State private var viewState: ViewState?
 
     var body: some View {
         VStack {
@@ -17,11 +18,11 @@ struct ContentView: View {
                 .foregroundColor(.secondary)
                 .frame(width: 120, height: 120)
 
-            Text(viewModel.viewState?.login ?? "login")
+            Text(viewState?.login ?? "login")
                 .bold()
                 .font(.title3)
 
-            Text(viewModel.viewState?.bio ?? "bio")
+            Text(viewState?.bio ?? "bio")
                 .padding()
 
             Button("request") {
@@ -31,48 +32,61 @@ struct ContentView: View {
             Spacer()
         }
         .padding()
+        .onReceive(viewModel.viewState) { self.viewState = $0 }
     }
 }
+
+// MARK: Architecuture
+
+import Combine
 
 extension ContentView {
     class ViewModel: ObservableObject {
         private let userProvider: GitHubUserProviderProtocol
-        @Published var viewState: ViewState?
+        var viewState: PassthroughSubject<ViewState, Never> = .init()
 
         init(userProvider: GitHubUserProviderProtocol) {
             self.userProvider = userProvider
         }
 
         func fetch(user: String) {
-            Task {
+            Task { @MainActor in
                 let user = try await userProvider.fetch(user: user)
-
-                await MainActor.run {
-                    viewState = Presenter.format(user: user)
-                }
+                viewState.send(Presenter.format(user: user))
             }
-        }
-    }
-
-    class ViewState: ObservableObject {
-        let login: String
-        let bio: String
-
-        init(login: String, bio: String) {
-            self.login = login
-            self.bio = bio
-        }
-    }
-
-    struct Presenter {
-        static func format(user: GitHubUser) -> ViewState {
-            ViewState(login: user.login, bio: user.bio)
         }
     }
 }
 
+// MARK: The above should not be nested to avoid preview failure
+struct Presenter {
+    static func format(user: GitHubUser) -> ViewState {
+        ViewState(login: user.login, bio: user.bio)
+    }
+}
+
+class ViewState: ObservableObject {
+    let login: String
+    let bio: String
+
+    init(login: String, bio: String) {
+        self.login = login
+        self.bio = bio
+    }
+}
+
+// MARK: Mock
+struct StubGitHubUserProvider: GitHubUserProviderProtocol {
+    func fetch(user: String) async throws -> GitHubUser {
+        return .init(login: "", avatarUrl: "", bio: "")
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
-        ContentView(viewModel: .init(userProvider: GitHubUserProvider()))
+        ContentView(viewModel: .init(
+            userProvider: StubGitHubUserProvider()
+        ))
     }
 }
