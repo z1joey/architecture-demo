@@ -17,6 +17,9 @@
 		D45138522CC16F2B00BE83EE /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45138512CC16F2B00BE83EE /* GitHubError.swift */; };
 		D4AA055F2CC4E8E600CE73AF /* CoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA055E2CC4E8E600CE73AF /* CoolButton.swift */; };
 		D4AA05632CC4E95E00CE73AF /* libCoolDesign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AA055C2CC4E8E600CE73AF /* libCoolDesign.a */; };
+		D4AA05672CC4FE5400CE73AF /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05662CC4FE5400CE73AF /* EntranceView.swift */; };
+		D4AA05692CC50FBA00CE73AF /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05682CC50FBA00CE73AF /* UserView.swift */; };
+		D4AA056E2CC51F9F00CE73AF /* NavigationDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA056D2CC51F9F00CE73AF /* NavigationDestinations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		D45138512CC16F2B00BE83EE /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
 		D4AA055C2CC4E8E600CE73AF /* libCoolDesign.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoolDesign.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AA055E2CC4E8E600CE73AF /* CoolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolButton.swift; sourceTree = "<group>"; };
+		D4AA05662CC4FE5400CE73AF /* EntranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
+		D4AA05682CC50FBA00CE73AF /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		D4AA056D2CC51F9F00CE73AF /* NavigationDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +128,11 @@
 		D451382B2CC16A2600BE83EE /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				D4AA056A2CC50FFD00CE73AF /* Architecture */,
 				D451382C2CC16A2600BE83EE /* MVVMApp.swift */,
 				D451382E2CC16A2600BE83EE /* ContentView.swift */,
+				D4AA05662CC4FE5400CE73AF /* EntranceView.swift */,
+				D4AA05682CC50FBA00CE73AF /* UserView.swift */,
 				D45138302CC16A2600BE83EE /* Assets.xcassets */,
 				D45138322CC16A2600BE83EE /* Preview Content */,
 			);
@@ -161,6 +170,14 @@
 				D4AA055E2CC4E8E600CE73AF /* CoolButton.swift */,
 			);
 			path = CoolDesign;
+			sourceTree = "<group>";
+		};
+		D4AA056A2CC50FFD00CE73AF /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				D4AA056D2CC51F9F00CE73AF /* NavigationDestinations.swift */,
+			);
+			path = Architecture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4AA05672CC4FE5400CE73AF /* EntranceView.swift in Sources */,
 				D451382F2CC16A2600BE83EE /* ContentView.swift in Sources */,
 				D451382D2CC16A2600BE83EE /* MVVMApp.swift in Sources */,
+				D4AA05692CC50FBA00CE73AF /* UserView.swift in Sources */,
+				D4AA056E2CC51F9F00CE73AF /* NavigationDestinations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

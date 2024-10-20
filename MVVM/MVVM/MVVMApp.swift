@@ -12,7 +12,7 @@ import DataAccess
 struct MVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: .init(userProvider: GitHubUserProvider()))
+            ContentView(coordinator: .init())
         }
     }
 }
