@@ -15,9 +15,9 @@ struct ContentView: View {
                     EntranceView(viewModel: .init {
                         coordinator.showUser($0)
                     })
-                case .User:
+                case .User(let id):
                     UserView(viewModel: .init(
-                        user: coordinator.user,
+                        user: id,
                         userProvider: GitHubUserProvider()
                     ) {
                         coordinator.showRoot()
@@ -32,11 +32,9 @@ struct ContentView: View {
 extension ContentView {
     class Coordinator: ObservableObject {
         @Published fileprivate var navigationPath = NavigationPath()
-        fileprivate var user: String = ""
 
         func showUser(_ user: String) {
-            self.user = user
-            navigationPath.append(NavigationDestinations.User)
+            navigationPath.append(NavigationDestinations.User(id: user))
         }
 
         func showRoot() {

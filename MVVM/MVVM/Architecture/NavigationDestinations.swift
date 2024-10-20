@@ -1,4 +1,4 @@
-enum NavigationDestinations: String, CaseIterable, Hashable {
+enum NavigationDestinations: Hashable {
     case Entrance
-    case User
+    case User(id: String)
 }
