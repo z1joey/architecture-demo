@@ -20,6 +20,10 @@
 		D4AA05672CC4FE5400CE73AF /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05662CC4FE5400CE73AF /* EntranceView.swift */; };
 		D4AA05692CC50FBA00CE73AF /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05682CC50FBA00CE73AF /* UserView.swift */; };
 		D4AA056E2CC51F9F00CE73AF /* NavigationDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA056D2CC51F9F00CE73AF /* NavigationDestinations.swift */; };
+		D4AA05762CC55C9D00CE73AF /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05752CC55C9D00CE73AF /* AnalyticsManager.swift */; };
+		D4AA057B2CC5653400CE73AF /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA057A2CC5653400CE73AF /* AnalyticsEngine.swift */; };
+		D4AA057D2CC565AB00CE73AF /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA057C2CC565AB00CE73AF /* AnalyticsEvent.swift */; };
+		D4AA057E2CC5675300CE73AF /* libAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AA05732CC55C9D00CE73AF /* libAnalytics.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,13 @@
 			remoteGlobalIDString = D4AA055B2CC4E8E600CE73AF;
 			remoteInfo = CoolDesign;
 		};
+		D4AA057F2CC5675300CE73AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D45138212CC16A2600BE83EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4AA05722CC55C9D00CE73AF;
+			remoteInfo = Analytics;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +61,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D4AA055A2CC4E8E600CE73AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4AA05712CC55C9D00CE73AF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -75,6 +95,10 @@
 		D4AA05662CC4FE5400CE73AF /* EntranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
 		D4AA05682CC50FBA00CE73AF /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		D4AA056D2CC51F9F00CE73AF /* NavigationDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinations.swift; sourceTree = "<group>"; };
+		D4AA05732CC55C9D00CE73AF /* libAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4AA05752CC55C9D00CE73AF /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		D4AA057A2CC5653400CE73AF /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
+		D4AA057C2CC565AB00CE73AF /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4AA05632CC4E95E00CE73AF /* libCoolDesign.a in Frameworks */,
+				D4AA057E2CC5675300CE73AF /* libAnalytics.a in Frameworks */,
 				D451384D2CC16D7300BE83EE /* libDataAccess.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +126,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4AA05702CC55C9D00CE73AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +142,7 @@
 				D451382B2CC16A2600BE83EE /* MVVM */,
 				D45138462CC16C6F00BE83EE /* DataAccess */,
 				D4AA055D2CC4E8E600CE73AF /* CoolDesign */,
+				D4AA05742CC55C9D00CE73AF /* Analytics */,
 				D451382A2CC16A2600BE83EE /* Products */,
 				D451384C2CC16D7300BE83EE /* Frameworks */,
 			);
@@ -121,6 +154,7 @@
 				D45138292CC16A2600BE83EE /* MVVM.app */,
 				D45138452CC16C6F00BE83EE /* libDataAccess.a */,
 				D4AA055C2CC4E8E600CE73AF /* libCoolDesign.a */,
+				D4AA05732CC55C9D00CE73AF /* libAnalytics.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +214,16 @@
 			path = Architecture;
 			sourceTree = "<group>";
 		};
+		D4AA05742CC55C9D00CE73AF /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D4AA05752CC55C9D00CE73AF /* AnalyticsManager.swift */,
+				D4AA057A2CC5653400CE73AF /* AnalyticsEngine.swift */,
+				D4AA057C2CC565AB00CE73AF /* AnalyticsEvent.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +240,7 @@
 			dependencies = (
 				D451384F2CC16D7300BE83EE /* PBXTargetDependency */,
 				D4AA05652CC4E95E00CE73AF /* PBXTargetDependency */,
+				D4AA05802CC5675300CE73AF /* PBXTargetDependency */,
 			);
 			name = MVVM;
 			productName = MVVM;
@@ -236,6 +281,23 @@
 			productReference = D4AA055C2CC4E8E600CE73AF /* libCoolDesign.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D4AA05722CC55C9D00CE73AF /* Analytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4AA05792CC55C9D00CE73AF /* Build configuration list for PBXNativeTarget "Analytics" */;
+			buildPhases = (
+				D4AA056F2CC55C9D00CE73AF /* Sources */,
+				D4AA05702CC55C9D00CE73AF /* Frameworks */,
+				D4AA05712CC55C9D00CE73AF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Analytics;
+			productName = Analytics;
+			productReference = D4AA05732CC55C9D00CE73AF /* libAnalytics.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,6 +315,9 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					D4AA055B2CC4E8E600CE73AF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D4AA05722CC55C9D00CE73AF = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -273,6 +338,7 @@
 				D45138282CC16A2600BE83EE /* MVVM */,
 				D45138442CC16C6E00BE83EE /* DataAccess */,
 				D4AA055B2CC4E8E600CE73AF /* CoolDesign */,
+				D4AA05722CC55C9D00CE73AF /* Analytics */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +386,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4AA056F2CC55C9D00CE73AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4AA057D2CC565AB00CE73AF /* AnalyticsEvent.swift in Sources */,
+				D4AA057B2CC5653400CE73AF /* AnalyticsEngine.swift in Sources */,
+				D4AA05762CC55C9D00CE73AF /* AnalyticsManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -332,6 +408,11 @@
 			isa = PBXTargetDependency;
 			target = D4AA055B2CC4E8E600CE73AF /* CoolDesign */;
 			targetProxy = D4AA05642CC4E95E00CE73AF /* PBXContainerItemProxy */;
+		};
+		D4AA05802CC5675300CE73AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4AA05722CC55C9D00CE73AF /* Analytics */;
+			targetProxy = D4AA057F2CC5675300CE73AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,6 +641,32 @@
 			};
 			name = Release;
 		};
+		D4AA05772CC55C9D00CE73AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4AA05782CC55C9D00CE73AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -595,6 +702,15 @@
 			buildConfigurations = (
 				D4AA05612CC4E8E600CE73AF /* Debug */,
 				D4AA05622CC4E8E600CE73AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4AA05792CC55C9D00CE73AF /* Build configuration list for PBXNativeTarget "Analytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4AA05772CC55C9D00CE73AF /* Debug */,
+				D4AA05782CC55C9D00CE73AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

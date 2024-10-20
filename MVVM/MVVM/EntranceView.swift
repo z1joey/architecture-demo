@@ -26,6 +26,7 @@ struct EntranceView: View {
             }
             .buttonStyle(.borderedProminent)
         }
+        .onAppear { AnalyticsManager.log(event: EntranceEvent.screenViewed) }
     }
 }
 
@@ -47,5 +48,23 @@ extension EntranceView {
 struct EntranceView_Previews: PreviewProvider {
     static var previews: some View {
         EntranceView(viewModel: .init())
+    }
+}
+
+import Analytics
+
+private enum EntranceEvent: AnalyticsEvent {
+    case screenViewed
+
+    var name: String {
+        switch self {
+        case .screenViewed: return "Entrance Viewed"
+        }
+    }
+
+    var meta: [String : String] {
+        switch self {
+        case .screenViewed: return [:]
+        }
     }
 }

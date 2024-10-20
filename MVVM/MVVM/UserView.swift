@@ -40,6 +40,9 @@ struct UserView: View {
             userName = $0?.login
             userBio = $0?.bio
         }
+        .onAppear {
+            AnalyticsManager.log(event: UserEvent.screenViewed())
+        }
     }
 }
 
@@ -97,5 +100,16 @@ struct UserView_Previews: PreviewProvider {
                 userProvider: StubGitHubUserProvider()
             )
         )
+    }
+}
+
+import Analytics
+
+private struct UserEvent: AnalyticsEvent {
+    var name: String
+    var meta: [String : String]
+
+    static func screenViewed() -> UserEvent {
+        .init(name: "User Viewed", meta: [:])
     }
 }
