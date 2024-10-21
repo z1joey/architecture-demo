@@ -2,7 +2,7 @@ import SwiftUI
 import CoolDesign
 
 struct UserView: View {
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
 
     @State private var login: String?
     @State private var bio: String?
@@ -41,7 +41,7 @@ struct UserView: View {
 
             VStack {
                 CoolButton(
-                    title: .constant("Fetch profile"),
+                    title: .constant("Try again"),
                     isLoading: $viewModel.isLoading,
                     action: viewModel.request
                 )
@@ -62,7 +62,13 @@ struct UserView: View {
             bio = $0?.bio
             avatar = $0?.avatarUrl
         }
-        .onAppear { UserEvent.screenViewed().log() }
+        .onAppear {
+            UserEvent.screenViewed().log()
+            // Wait until render/layout finished
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                viewModel.request()
+            }
+        }
     }
 }
 
