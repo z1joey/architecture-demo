@@ -29,6 +29,7 @@
 		D4AA05882CC64BF500CE73AF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05872CC64BF500CE73AF /* UserViewModel.swift */; };
 		D4AA058A2CC64C5700CE73AF /* UserView+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA05892CC64C5700CE73AF /* UserView+Mock.swift */; };
 		D4AA058C2CC64C7A00CE73AF /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA058B2CC64C7A00CE73AF /* UserEvent.swift */; };
+		D4AA058E2CC6561D00CE73AF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA058D2CC6561D00CE73AF /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D4AA05872CC64BF500CE73AF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D4AA05892CC64C5700CE73AF /* UserView+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserView+Mock.swift"; sourceTree = "<group>"; };
 		D4AA058B2CC64C7A00CE73AF /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
+		D4AA058D2CC6561D00CE73AF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				D4AA05862CC64BE500CE73AF /* User */,
 				D451382C2CC16A2600BE83EE /* MVVMApp.swift */,
 				D451382E2CC16A2600BE83EE /* ContentView.swift */,
+				D4AA058D2CC6561D00CE73AF /* Coordinator.swift */,
 				D45138302CC16A2600BE83EE /* Assets.xcassets */,
 				D45138322CC16A2600BE83EE /* Preview Content */,
 			);
@@ -397,6 +400,7 @@
 				D4AA05672CC4FE5400CE73AF /* EntranceView.swift in Sources */,
 				D4AA05852CC64B6700CE73AF /* EntranceEvent.swift in Sources */,
 				D451382F2CC16A2600BE83EE /* ContentView.swift in Sources */,
+				D4AA058E2CC6561D00CE73AF /* Coordinator.swift in Sources */,
 				D4AA058A2CC64C5700CE73AF /* UserView+Mock.swift in Sources */,
 				D451382D2CC16A2600BE83EE /* MVVMApp.swift in Sources */,
 				D4AA05692CC50FBA00CE73AF /* UserView.swift in Sources */,

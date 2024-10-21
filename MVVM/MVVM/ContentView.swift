@@ -18,27 +18,19 @@ struct ContentView: View {
                 case .User(let id):
                     UserView(viewModel: .init(
                         user: id,
-                        userProvider: GitHubUserProvider()
-                    ) {
-                        coordinator.showRoot()
-                    })
+                        userProvider: GitHubUserProvider(),
+                        showRootView: coordinator.showRoot,
+                        showError: coordinator.showError(_:)
+                    ))
                 }
             }
-        }
-    }
-}
-
-// MARK: Architecuture
-extension ContentView {
-    class Coordinator: ObservableObject {
-        @Published fileprivate var navigationPath = NavigationPath()
-
-        func showUser(_ user: String) {
-            navigationPath.append(NavigationDestinations.User(id: user))
-        }
-
-        func showRoot() {
-            navigationPath = .init()
+            .alert("Error", isPresented: .constant(coordinator.error != nil), actions: {
+                Button("Dismiss") {
+                    coordinator.error = nil
+                }
+            }, message: {
+                Text(coordinator.error?.localizedDescription ?? "No description")
+            })
         }
     }
 }
