@@ -6,7 +6,7 @@ extension ContentView {
         @Published var error: Error?
 
         func showUser(_ user: String) {
-            navigationPath.append(NavigationDestinations.User(id: user))
+            navigationPath.append(Destination.User(id: user))
         }
 
         func showRoot() {

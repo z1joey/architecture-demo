@@ -6,15 +6,17 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
-            EntranceView(viewModel: .init {
-                coordinator.showUser($0)
-            })
-            .navigationDestination(for: NavigationDestinations.self) { screen in
+            EntranceView(viewModel: .init(
+                deeplinks: DeeplinkProvider.allCases,
+                showUserView: coordinator.showUser(_:)
+            ))
+            .navigationDestination(for: Destination.self) { screen in
                 switch screen {
                 case .Entrance:
-                    EntranceView(viewModel: .init {
-                        coordinator.showUser($0)
-                    })
+                    EntranceView(viewModel: .init(
+                        deeplinks: DeeplinkProvider.allCases,
+                        showUserView: coordinator.showUser(_:)
+                    ))
                 case .User(let id):
                     UserView(viewModel: .init(
                         user: id,
@@ -31,6 +33,13 @@ struct ContentView: View {
             }, message: {
                 Text(coordinator.error?.localizedDescription ?? "No description")
             })
+            .onOpenURL { url in
+                let dependency = DeeplinkDependencyImp(
+                    deeplink: AnyDeeplink(url: url),
+                    coordinator: coordinator
+                )
+                DeeplinkHandler(dependency: dependency).execute()
+            }
         }
     }
 }
