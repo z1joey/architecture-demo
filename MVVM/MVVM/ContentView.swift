@@ -1,7 +1,10 @@
 import SwiftUI
 import DataAccess
+import Analytics
 
 struct ContentView: View {
+    @EnvironmentObject var appDelegate: AppDelegate
+    @EnvironmentObject var sceneDelegate: SceneDelegate
     @ObservedObject var coordinator: Coordinator
 
     var body: some View {
@@ -34,11 +37,18 @@ struct ContentView: View {
                 Text(coordinator.error?.localizedDescription ?? "No description")
             })
             .onOpenURL { url in
-                let dependency = DeeplinkDependencyImp(
+                let dependency = DeeplinkHandlerDependency(
                     deeplink: AnyDeeplink(url: url),
                     coordinator: coordinator
                 )
                 DeeplinkHandler(dependency: dependency).execute()
+            }
+            .onReceive(appDelegate.$hasLaunched) { hasLaunched in
+                print("hasLaunched : \(hasLaunched)")
+                AnalyticsManager.auth()
+            }
+            .onReceive(sceneDelegate.$isActive) { isActive in
+                print("isActive : \(isActive)")
             }
         }
     }

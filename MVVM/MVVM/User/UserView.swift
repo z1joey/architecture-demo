@@ -74,6 +74,14 @@ struct UserView: View {
     }
 }
 
+import DataAccess
+
+struct StubGitHubUserProvider: GitHubUserProviderProtocol {
+    func fetch(user: String) async throws -> GitHubUser {
+        return .init(login: "login", avatarUrl: "avatar", bio: "bio")
+    }
+}
+
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         UserView(

@@ -8,4 +8,8 @@ public final class AnalyticsManager {
     public static func log(event: AnalyticsEvent) {
         engines.forEach { $0.send(name: event.name, metadata: event.meta) }
     }
+
+    public static func auth() {
+        engines.forEach { $0.auth() }
+    }
 }
