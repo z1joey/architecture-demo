@@ -6,6 +6,7 @@ struct ContentView: View {
     @EnvironmentObject var appDelegate: AppDelegate
     @EnvironmentObject var sceneDelegate: SceneDelegate
     @ObservedObject var coordinator: Coordinator
+    var deeplinkHandler: DeeplinkHandlerProtocol
 
     var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
@@ -15,11 +16,6 @@ struct ContentView: View {
             ))
             .navigationDestination(for: Destination.self) { screen in
                 switch screen {
-                case .Entrance:
-                    EntranceView(viewModel: .init(
-                        deeplinks: DeeplinkProvider.allCases,
-                        showUserView: coordinator.showUser(_:)
-                    ))
                 case .User(let id):
                     UserView(viewModel: .init(
                         user: id,
@@ -36,13 +32,7 @@ struct ContentView: View {
             }, message: {
                 Text(coordinator.error?.localizedDescription ?? "No description")
             })
-            .onOpenURL { url in
-                let dependency = DeeplinkHandlerDependency(
-                    deeplink: AnyDeeplink(url: url),
-                    coordinator: coordinator
-                )
-                DeeplinkHandler(dependency: dependency).execute()
-            }
+            .onOpenURL { deeplinkHandler.open(deeplink: AnyDeeplink(url: $0)) }
             .onReceive(appDelegate.$hasLaunched) { hasLaunched in
                 print("hasLaunched : \(hasLaunched)")
                 AnalyticsManager.auth()
@@ -55,7 +45,12 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let coordinator: Coordinator = .init()
+
     static var previews: some View {
-        ContentView(coordinator: .init())
+        ContentView(
+            coordinator: coordinator,
+            deeplinkHandler: DeeplinkHandler(coordinator: coordinator)
+        )
     }
 }
