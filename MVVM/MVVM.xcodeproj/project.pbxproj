@@ -34,6 +34,9 @@
 		D4B8E8722CC8F71E000CE206 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8712CC8F71E000CE206 /* SceneDelegate.swift */; };
 		D4B8E8812CC9365A000CE206 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8802CC9365A000CE206 /* CoordinatorTests.swift */; };
 		D4B8E8832CCA3288000CE206 /* SystemEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8822CCA3288000CE206 /* SystemEvent.swift */; };
+		D4B8E8852CCA383C000CE206 /* EntranceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8842CCA383C000CE206 /* EntranceTests.swift */; };
+		D4B8E8872CCA3C38000CE206 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8862CCA3C38000CE206 /* UserTests.swift */; };
+		D4B8E8892CCA3CD2000CE206 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8882CCA3CD2000CE206 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,9 @@
 		D4B8E8772CC93610000CE206 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B8E8802CC9365A000CE206 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		D4B8E8822CCA3288000CE206 /* SystemEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEvent.swift; sourceTree = "<group>"; };
+		D4B8E8842CCA383C000CE206 /* EntranceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceTests.swift; sourceTree = "<group>"; };
+		D4B8E8862CCA3C38000CE206 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		D4B8E8882CCA3CD2000CE206 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +298,9 @@
 			isa = PBXGroup;
 			children = (
 				D4B8E8802CC9365A000CE206 /* CoordinatorTests.swift */,
+				D4B8E8842CCA383C000CE206 /* EntranceTests.swift */,
+				D4B8E8862CCA3C38000CE206 /* UserTests.swift */,
+				D4B8E8882CCA3CD2000CE206 /* Mocks.swift */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -511,7 +520,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B8E8872CCA3C38000CE206 /* UserTests.swift in Sources */,
 				D4B8E8812CC9365A000CE206 /* CoordinatorTests.swift in Sources */,
+				D4B8E8852CCA383C000CE206 /* EntranceTests.swift in Sources */,
+				D4B8E8892CCA3CD2000CE206 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
