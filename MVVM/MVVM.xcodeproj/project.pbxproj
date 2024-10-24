@@ -33,6 +33,7 @@
 		D4B8E86B2CC81204000CE206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E86A2CC81204000CE206 /* AppDelegate.swift */; };
 		D4B8E8722CC8F71E000CE206 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8712CC8F71E000CE206 /* SceneDelegate.swift */; };
 		D4B8E8812CC9365A000CE206 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8802CC9365A000CE206 /* CoordinatorTests.swift */; };
+		D4B8E8832CCA3288000CE206 /* SystemEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8822CCA3288000CE206 /* SystemEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		D4B8E8712CC8F71E000CE206 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4B8E8772CC93610000CE206 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B8E8802CC9365A000CE206 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		D4B8E8822CCA3288000CE206 /* SystemEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				D4B8E86A2CC81204000CE206 /* AppDelegate.swift */,
 				D4AA05BF2CC78F6B00CE73AF /* DeepLink.swift */,
 				D4AA056D2CC51F9F00CE73AF /* Destination.swift */,
+				D4B8E8822CCA3288000CE206 /* SystemEvent.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				D4AA058C2CC64C7A00CE73AF /* UserEvent.swift in Sources */,
 				D4AA05882CC64BF500CE73AF /* UserViewModel.swift in Sources */,
 				D4B8E86B2CC81204000CE206 /* AppDelegate.swift in Sources */,
+				D4B8E8832CCA3288000CE206 /* SystemEvent.swift in Sources */,
 				D4B8E8722CC8F71E000CE206 /* SceneDelegate.swift in Sources */,
 				D4AA05672CC4FE5400CE73AF /* EntranceView.swift in Sources */,
 				D4AA05852CC64B6700CE73AF /* EntranceEvent.swift in Sources */,

@@ -1,11 +1,13 @@
 import SwiftUI
 import DataAccess
 import Analytics
+import Combine
 
 struct ContentView: View {
     @EnvironmentObject var appDelegate: AppDelegate
     @EnvironmentObject var sceneDelegate: SceneDelegate
     @ObservedObject var coordinator: Coordinator
+
     var deeplinkHandler: DeeplinkHandlerProtocol
 
     var body: some View {
@@ -33,12 +35,13 @@ struct ContentView: View {
                 Text(coordinator.error?.localizedDescription ?? "No description")
             })
             .onOpenURL { deeplinkHandler.open(deeplink: AnyDeeplink(url: $0)) }
-            .onReceive(appDelegate.$hasLaunched) { hasLaunched in
-                print("hasLaunched : \(hasLaunched)")
-                AnalyticsManager.auth()
-            }
-            .onReceive(sceneDelegate.$isActive) { isActive in
-                print("isActive : \(isActive)")
+            .onReceive(Publishers.Merge(appDelegate.$systemEvent, sceneDelegate.$systemEvent)) {
+                switch $0 {
+                case .appDidFinishLaunching: print("appDidFinishLaunching")
+                case .sceneWillResignActive: print("sceneWillResignActive")
+                case .sceneDidBecomeActive: print("sceneDidBecomeActive")
+                case .idle: return
+                }
             }
         }
     }

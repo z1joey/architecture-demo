@@ -2,15 +2,17 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, ObservableObject {
-    @Published var isActive: Bool = true
+    @Published var systemEvent: SystemEvent = .idle
 
     @MainActor
     func sceneDidBecomeActive(_ scene: UIScene) {
-        isActive = true
+        systemEvent = .sceneDidBecomeActive
+        systemEvent = .idle
     }
 
     @MainActor
     func sceneWillResignActive(_ scene: UIScene) {
-        isActive = false
+        systemEvent = .sceneWillResignActive
+        systemEvent = .idle
     }
 }

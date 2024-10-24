@@ -1,11 +1,12 @@
 import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
-    @Published var hasLaunched: Bool = false
+    @Published var systemEvent: SystemEvent = .idle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("didFinishLaunchingWithOptions")
-        hasLaunched = true
+        systemEvent = .appDidFinishLaunching
+        systemEvent = .idle
 
         return true
     }
