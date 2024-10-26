@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D49E98982CCD9F28005DF37F /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = D49E98972CCD9F28005DF37F /* ModernRIBs */; };
+		D49E989B2CCF8106005DF37F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D49E989A2CCF8106005DF37F /* SnapKit */; };
+		D49E98AD2CCF8A90005DF37F /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D49E98AC2CCF8A90005DF37F /* SVProgressHUD */; };
 		D4B8E8D22CCB95D5000CE206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B8E8D12CCB95D5000CE206 /* Assets.xcassets */; };
 		D4B8E8D62CCB95D5000CE206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B8E8D52CCB95D5000CE206 /* Preview Assets.xcassets */; };
 		D4B8E8E02CCB95D5000CE206 /* RIBsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8E8DF2CCB95D5000CE206 /* RIBsTests.swift */; };
@@ -53,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49E98AD2CCF8A90005DF37F /* SVProgressHUD in Frameworks */,
+				D49E98982CCD9F28005DF37F /* ModernRIBs in Frameworks */,
+				D49E989B2CCF8106005DF37F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +152,11 @@
 			dependencies = (
 			);
 			name = RIBs;
+			packageProductDependencies = (
+				D49E98972CCD9F28005DF37F /* ModernRIBs */,
+				D49E989A2CCF8106005DF37F /* SnapKit */,
+				D49E98AC2CCF8A90005DF37F /* SVProgressHUD */,
+			);
 			productName = RIBs;
 			productReference = D4B8E8CA2CCB95D4000CE206 /* RIBs.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +229,11 @@
 				Base,
 			);
 			mainGroup = D4B8E8C12CCB95D4000CE206;
+			packageReferences = (
+				D49E98962CCD9F28005DF37F /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				D49E98992CCF8106005DF37F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D49E98AB2CCF8A90005DF37F /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = D4B8E8CB2CCB95D4000CE206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +628,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D49E98962CCD9F28005DF37F /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevYeom/ModernRIBs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D49E98992CCF8106005DF37F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D49E98AB2CCF8A90005DF37F /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D49E98972CCD9F28005DF37F /* ModernRIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D49E98962CCD9F28005DF37F /* XCRemoteSwiftPackageReference "ModernRIBs" */;
+			productName = ModernRIBs;
+		};
+		D49E989A2CCF8106005DF37F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D49E98992CCF8106005DF37F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D49E98AC2CCF8A90005DF37F /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D49E98AB2CCF8A90005DF37F /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4B8E8C22CCB95D4000CE206 /* Project object */;
 }
