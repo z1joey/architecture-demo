@@ -1,26 +1,34 @@
 import UIKit
 import SwiftUI
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, ObservableObject {
-    @Published var systemEvent: SystemEvent?
-    weak var deepLinkDelegate: DeepLinkDelegate?
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
+    var systemEventsHandler: SystemEventsHandling?
 
-    @MainActor
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        systemEvent = .sceneDidBecomeActive
-    }
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            let app = AppBuilder.build()
 
-    @MainActor
-    func sceneWillResignActive(_ scene: UIScene) {
-        systemEvent = .sceneWillResignActive
+            window.rootViewController = UIHostingController(
+                rootView: RootBuilder().build()
+            )
+            self.window = window
+            self.systemEventsHandler = app.systemEventsHandler
+            window.makeKeyAndVisible()
+        }
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else { return }
-        deepLinkDelegate?.open(url)
+        systemEventsHandler?.sceneOpenURLContexts(URLContexts)
     }
-}
 
-protocol DeepLinkDelegate: AnyObject {
-    func open(_ url: URL)
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        systemEventsHandler?.sceneDidBecomeActive()
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+        systemEventsHandler?.sceneWillResignActive()
+    }
 }

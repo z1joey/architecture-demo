@@ -4,6 +4,11 @@ class UserProfileBuilder: Buildable {
     var path: NavigationPath = .init()
     var router: UserProfileRouting?
 
+    func withRouter(_ router: UserProfileRouting) -> Self {
+        self.router = router
+        return self
+    }
+
     func build() -> some View {
         guard let router else {
             fatalError("invalid router")
@@ -32,9 +37,6 @@ private struct UserProfileNavigationView: View {
 
 struct UserProfileNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileNavigationView(presenter: .init(
-            router: AppState(),
-            interactor: UserProfileInteractor()
-        ))
+        UserProfileBuilder().build()
     }
 }

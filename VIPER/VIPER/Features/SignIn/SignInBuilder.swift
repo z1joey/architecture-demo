@@ -4,6 +4,16 @@ class SignInBuilder: Buildable{
     var path: NavigationPath = .init()
     var router: SignInRouting?
 
+    func withPath(_ elements: [SignInDestination]) -> Self {
+        self.path = .init(elements)
+        return self
+    }
+
+    func withRouter(_ router: SignInRouting) -> Self {
+        self.router = router
+        return self
+    }
+
     func build() -> some View {
         guard let router else {
             fatalError("invalid router")
@@ -38,10 +48,7 @@ private struct SignInNavigationView: View {
 
 struct SignInNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInNavigationView(presenter: .init(
-            router: AppState(),
-            interactor: SignInInteractor()
-        ))
+        SignInBuilder().build()
     }
 }
 
