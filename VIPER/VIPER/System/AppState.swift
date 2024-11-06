@@ -1,34 +1,36 @@
+struct AppState: Equatable {
+    var system = System()
+    var routing = ViewRouting()
+}
+
+extension AppState {
+    struct System: Equatable {
+        var isActive: Bool = false
+        var keyboardHeight: CGFloat = 0
+    }
+}
+
+extension AppState {
+    struct ViewRouting: Equatable {
+        var terms = Terms.Routing()
+        var signIn = SignIn.Routing()
+        var success = Success.Routing()
+        var root = RootView.Routing()
+    }
+}
+
+import SwiftUI
 import Combine
-import Foundation
 
-class AppState: ObservableObject {
-    @Published private(set) var hasUserSignIn: Bool = false
-    @Published private(set) var isActive: Bool = false
-    @Published private(set) var selectedTab: Int = 0
-    @Published private(set) var error: Error?
+typealias AppStateSubject = CurrentValueSubject<AppState, Never>
 
-    func setSignIn(_ success: Bool) {
-        if success, !hasUserSignIn {
-            hasUserSignIn = success
-        } else {
-            hasUserSignIn = false
-            selectedTab = 0
-        }
-    }
+struct AppStateKey: EnvironmentKey {
+    static var defaultValue: AppStateSubject = .init(AppState())
+}
 
-    func setActive(_ isActive: Bool) {
-        if self.isActive != isActive {
-            self.isActive = isActive
-        }
-    }
-
-    func setTab(_ tab: Int) {
-        if selectedTab != tab {
-            selectedTab = tab
-        }
-    }
-
-    func setError(_ error: Error) {
-        self.error = error
+extension EnvironmentValues {
+    var appState: AppStateSubject {
+        get { self[AppStateKey.self] }
+        set { self[AppStateKey.self] = newValue }
     }
 }

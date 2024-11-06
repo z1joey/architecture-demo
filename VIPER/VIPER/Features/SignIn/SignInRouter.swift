@@ -1,22 +1,12 @@
-// MARK: App level routing
-protocol SignInRouting {
-    func showUserProfile()
-    func show2ndTab()
+extension SignIn {
+    struct Routing: Equatable {}
 }
 
-extension AppState: SignInRouting {
-    func showUserProfile() {
-        setSignIn(true)
-    }
-
-    func show2ndTab() {
-        setTab(1)
-    }
+extension Terms {
+    struct Routing: Equatable {}
 }
 
-// MARK: Module level routing
-enum SignInDestination: Hashable {
-    case signIn
-    case success
+extension Success {
+    struct Routing: Equatable {}
 }
 

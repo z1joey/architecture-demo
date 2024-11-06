@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct TermsView: View {
+struct Terms: View {
     @State private var step: Int? = 0
-    @EnvironmentObject var presenter: SignInPresenter
+    @EnvironmentObject var interactor: SignIn.Interactor
 
     var body: some View {
         VStack(spacing: 20) {
             Text("Please read the terms&condition")
             Button("Continue") {
-                presenter.continueTapped()
+                //presenter.continueTapped()
             }
         }
     }
@@ -16,6 +16,6 @@ struct TermsView: View {
 
 struct TermsView_Previews: PreviewProvider {
     static var previews: some View {
-        TermsView()
+        Terms()
     }
 }

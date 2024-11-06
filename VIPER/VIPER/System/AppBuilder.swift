@@ -2,7 +2,7 @@ import Combine
 
 struct AppBuilder {
     let systemEventsHandler: SystemEventsHandling
-    let appState: CurrentValueSubject<AppState, Never>
+    let state: CurrentValueSubject<AppState, Never>
 }
 
 extension AppBuilder {
@@ -12,7 +12,7 @@ extension AppBuilder {
 
         return AppBuilder(
             systemEventsHandler: systemEventsHandler,
-            appState: appState
+            state: appState
         )
     }
 }

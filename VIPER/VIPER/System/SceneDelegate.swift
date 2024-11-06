@@ -12,11 +12,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let app = AppBuilder.build()
 
             window.rootViewController = UIHostingController(
-                rootView: RootBuilder().build()
+                rootView: RootView(appState: app.state)
             )
-            self.window = window
-            self.systemEventsHandler = app.systemEventsHandler
             window.makeKeyAndVisible()
+
+            self.systemEventsHandler = app.systemEventsHandler
+            self.window = window
         }
     }
 
