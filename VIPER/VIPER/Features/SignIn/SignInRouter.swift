@@ -7,6 +7,8 @@ extension Terms {
 }
 
 extension Success {
-    struct Routing: Equatable {}
+    struct Routing: Equatable {
+        var result: Bool = false
+    }
 }
 

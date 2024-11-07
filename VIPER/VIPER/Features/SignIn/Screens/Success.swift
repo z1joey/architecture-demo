@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Success: View {
-    @EnvironmentObject var interactor: SignIn.Interactor
+    @EnvironmentObject var presenter: SignIn.Presenter
 
     var body: some View {
         VStack(spacing: 20) {

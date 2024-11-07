@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Terms: View {
     @State private var step: Int? = 0
-    @EnvironmentObject var interactor: SignIn.Interactor
+    @EnvironmentObject var presenter: SignIn.Presenter
 
     var body: some View {
         VStack(spacing: 20) {

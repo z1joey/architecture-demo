@@ -1,6 +1,8 @@
 import Combine
 import SwiftUI
 
+typealias CancelBag = Set<AnyCancellable>
+
 extension CurrentValueSubject {
     subscript<T>(_ path: WritableKeyPath<Output, T>) -> T where T: Equatable {
         get { value[keyPath: path] }
@@ -47,8 +49,7 @@ extension Binding where Value: Equatable {
 
 extension Publisher where Failure == Never {
     func assign<T: AnyObject>(
-        to keyPath: ReferenceWritableKeyPath<T, Output>,
-        on object: T
+        to object: T, _ keyPath: ReferenceWritableKeyPath<T, Output>
     ) -> AnyCancellable {
         sink { [weak object] value in
             object?[keyPath: keyPath] = value

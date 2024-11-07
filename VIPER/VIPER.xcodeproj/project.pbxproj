@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D480761F2CDC171400E097A3 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480761E2CDC171400E097A3 /* SignInRouter.swift */; };
 		D48076232CDC1A9C00E097A3 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076222CDC1A9C00E097A3 /* Buildable.swift */; };
+		D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */; };
+		D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076272CDC2F3900E097A3 /* RootPresenter.swift */; };
+		D480762A2CDC334400E097A3 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076292CDC334400E097A3 /* AppContext.swift */; };
 		D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3BA2CD7A7690021DAF2 /* RootView.swift */; };
 		D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */; };
 		D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3C02CD7A76A0021DAF2 /* Preview Assets.xcassets */; };
@@ -20,11 +23,9 @@
 		D48FA3EC2CD7AE9B0021DAF2 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3EB2CD7AE9B0021DAF2 /* SignIn.swift */; };
 		D48FA3F12CD7AFD70021DAF2 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */; };
 		D48FA3FB2CD7D2500021DAF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3FA2CD7D2500021DAF2 /* AppState.swift */; };
-		D48FA40A2CD83D1D0021DAF2 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4092CD83D1D0021DAF2 /* SignInBuilder.swift */; };
 		D48FA4122CD93EED0021DAF2 /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4112CD93EED0021DAF2 /* Terms.swift */; };
 		D48FA4172CD943B90021DAF2 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4162CD943B90021DAF2 /* Success.swift */; };
 		D48FA4262CDADB860021DAF2 /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */; };
-		D48FA42A2CDB958C0021DAF2 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4292CDB958C0021DAF2 /* AppBuilder.swift */; };
 		D48FA42C2CDBB4680021DAF2 /* Combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA42B2CDBB4680021DAF2 /* Combine+.swift */; };
 		D48FA42E2CDBFCFB0021DAF2 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA42D2CDBFCFB0021DAF2 /* Loadable.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,9 @@
 /* Begin PBXFileReference section */
 		D480761E2CDC171400E097A3 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		D48076222CDC1A9C00E097A3 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
+		D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		D48076272CDC2F3900E097A3 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		D48076292CDC334400E097A3 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		D48FA3B52CD7A7690021DAF2 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48FA3BA2CD7A7690021DAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,12 +68,10 @@
 		D48FA3EB2CD7AE9B0021DAF2 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		D48FA3FA2CD7D2500021DAF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		D48FA4092CD83D1D0021DAF2 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
 		D48FA4112CD93EED0021DAF2 /* Terms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terms.swift; sourceTree = "<group>"; };
 		D48FA4162CD943B90021DAF2 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		D48FA41F2CDA517C0021DAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
-		D48FA4292CDB958C0021DAF2 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		D48FA42B2CDBB4680021DAF2 /* Combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+.swift"; sourceTree = "<group>"; };
 		D48FA42D2CDBFCFB0021DAF2 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +167,7 @@
 				D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */,
 				D48FA3E32CD7A7940021DAF2 /* SceneDelegate.swift */,
 				D48FA3E62CD7A7B20021DAF2 /* AppDelegate.swift */,
-				D48FA4292CDB958C0021DAF2 /* AppBuilder.swift */,
+				D48076292CDC334400E097A3 /* AppContext.swift */,
 				D48FA3FA2CD7D2500021DAF2 /* AppState.swift */,
 			);
 			path = System;
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				D48FA3BA2CD7A7690021DAF2 /* RootView.swift */,
+				D48076272CDC2F3900E097A3 /* RootPresenter.swift */,
 				D48FA3ED2CD7AF240021DAF2 /* SignIn */,
 			);
 			path = Features;
@@ -184,9 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				D48FA4152CD943980021DAF2 /* Screens */,
-				D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */,
-				D48FA4092CD83D1D0021DAF2 /* SignInBuilder.swift */,
 				D480761E2CDC171400E097A3 /* SignInRouter.swift */,
+				D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */,
+				D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -348,19 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */,
 				D48FA3EC2CD7AE9B0021DAF2 /* SignIn.swift in Sources */,
 				D48FA42C2CDBB4680021DAF2 /* Combine+.swift in Sources */,
+				D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */,
 				D48FA3E72CD7A7B20021DAF2 /* AppDelegate.swift in Sources */,
 				D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */,
 				D48FA42E2CDBFCFB0021DAF2 /* Loadable.swift in Sources */,
+				D480762A2CDC334400E097A3 /* AppContext.swift in Sources */,
 				D48FA4262CDADB860021DAF2 /* SystemEventsHandler.swift in Sources */,
-				D48FA40A2CD83D1D0021DAF2 /* SignInBuilder.swift in Sources */,
 				D48FA4172CD943B90021DAF2 /* Success.swift in Sources */,
 				D48FA3FB2CD7D2500021DAF2 /* AppState.swift in Sources */,
 				D48FA4122CD93EED0021DAF2 /* Terms.swift in Sources */,
 				D480761F2CDC171400E097A3 /* SignInRouter.swift in Sources */,
 				D48FA3F12CD7AFD70021DAF2 /* SignInInteractor.swift in Sources */,
-				D48FA42A2CDB958C0021DAF2 /* AppBuilder.swift in Sources */,
 				D48076232CDC1A9C00E097A3 /* Buildable.swift in Sources */,
 				D48FA3E42CD7A7940021DAF2 /* SceneDelegate.swift in Sources */,
 			);
