@@ -23,8 +23,13 @@ struct RootView: View {
                     }
                     .tag(1)
             }
-            .fullScreenCover(isPresented: $presenter.router.signInSheet) {
-                presenter.signInView()
+            .fullScreenCover(isPresented: $presenter.router.forceUpdateSheet) {
+                ForceUpdate().environmentObject(presenter)
+            }
+            .overlay {
+                if presenter.router.signInSheet {
+                    presenter.signInView()
+                }
             }
         }
     }
@@ -34,7 +39,7 @@ struct ContentView_Previews: PreviewProvider {
 
     static var previews: some View {
         SignIn(presenter: .init(
-            interactor: SignInInteractor(),
+            interactor: SignIn.Interactor(),
             appState: .init(AppState())
         ))
     }

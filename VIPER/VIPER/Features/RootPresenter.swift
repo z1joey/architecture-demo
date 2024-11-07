@@ -30,9 +30,14 @@ extension RootView {
 
         func signInView() -> some View {
             SignIn(presenter: .init(
-                interactor: SignInInteractor(),
+                interactor: SignIn.Interactor(),
                 appState: dependency.appState
             ))
+        }
+
+        func testDeeplink() {
+            dependency.appState[\.routing.root.forceUpdateSheet] = false
+            UIApplication.shared.open(URL(string: "viper://user/test")!)
         }
     }
 }

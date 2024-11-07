@@ -8,7 +8,7 @@ struct AppContext {
 extension AppContext {
     static func instance() -> Self {
         let appState = AppStateSubject(AppState())
-        let systemEventsHandler = SystemEventsHandler()
+        let systemEventsHandler = SystemEventsHandler(appState: appState)
 
         return AppContext(
             appState: appState,

@@ -24,7 +24,7 @@ struct SignIn: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignIn(presenter: .init(
-            interactor: SignInInteractor(),
+            interactor: SignIn.Interactor(),
             appState: .init(AppState())
         ))
     }
