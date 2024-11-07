@@ -1,6 +1,13 @@
 struct AppState: Equatable {
+    var user = UserData()
     var system = System()
     var routing = ViewRouting()
+}
+
+extension AppState {
+    struct UserData: Equatable {
+        var token: String?
+    }
 }
 
 extension AppState {
@@ -12,9 +19,7 @@ extension AppState {
 
 extension AppState {
     struct ViewRouting: Equatable {
-        var terms = Terms.Routing()
         var signIn = SignIn.Routing()
-        var success = Success.Routing()
         var root = RootView.Routing()
     }
 }

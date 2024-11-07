@@ -28,9 +28,8 @@ extension CurrentValueSubject {
 }
 
 extension Binding where Value: Equatable {
-    func share<State>(with state: CurrentValueSubject<State, Never>,
-                           _ keyPath: WritableKeyPath<State, Value>) -> Self {
-        return onSet { state[keyPath] = $0 }
+    func share<State>(with state: CurrentValueSubject<State, Never>, _ path: WritableKeyPath<State, Value>) -> Self {
+        return onSet { state[path] = $0 }
     }
 }
 
@@ -48,7 +47,7 @@ extension Binding where Value: Equatable {
 }
 
 extension Publisher where Failure == Never {
-    func assign<T: AnyObject>(
+    func weaklyAssign<T: AnyObject>(
         to object: T, _ keyPath: ReferenceWritableKeyPath<T, Output>
     ) -> AnyCancellable {
         sink { [weak object] value in

@@ -1,14 +1,11 @@
+import SwiftUI
+
 extension SignIn {
-    struct Routing: Equatable {}
-}
-
-extension Terms {
-    struct Routing: Equatable {}
-}
-
-extension Success {
     struct Routing: Equatable {
-        var result: Bool = false
+        var path: NavigationPath = .init()
+    }
+
+    enum Destination: Hashable {
+        case success
     }
 }
-

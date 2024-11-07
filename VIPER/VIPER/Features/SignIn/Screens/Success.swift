@@ -5,12 +5,10 @@ struct Success: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Success!")
-            Button("Back to Terms") {
-            }
-            Button("User has signed in") {
-            }
-            Button("SignIn and Show 2nd Tab") {
+            presenter.tokenView()
+
+            Button("Go to home") {
+                presenter.goToHomeTapped()
             }
         }
     }
