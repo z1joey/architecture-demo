@@ -38,9 +38,6 @@ struct RootView: View {
 struct ContentView_Previews: PreviewProvider {
 
     static var previews: some View {
-        SignIn(presenter: .init(
-            interactor: SignIn.Interactor(),
-            appState: .init(AppState())
-        ))
+        RootView(presenter: .init(context: AppContext.mock()))
     }
 }

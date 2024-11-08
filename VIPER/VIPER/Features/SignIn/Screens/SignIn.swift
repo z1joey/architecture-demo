@@ -23,9 +23,6 @@ struct SignIn: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn(presenter: .init(
-            interactor: SignIn.Interactor(),
-            appState: .init(AppState())
-        ))
+        SignIn(presenter: .init(context: AppContext.mock()))
     }
 }

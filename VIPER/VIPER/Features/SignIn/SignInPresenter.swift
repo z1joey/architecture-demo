@@ -2,22 +2,20 @@ import SwiftUI
 import Combine
 
 extension SignIn {
-    class Presenter: ObservableObject {
-        private let interactor: SignInInteractor
-        private let appState: AppStateSubject
+    class Presenter: ObservableObject, Presentable {
+        let context: AppContext
         private var cancelBag = CancelBag()
 
         @Published var router: Routing
         @Published var isLoading: Bool = false
 
-        init(interactor: SignInInteractor, appState: AppStateSubject) {
-            _router = .init(initialValue: appState.value.routing.signIn)
+        init(context: AppContext) {
+            _router = .init(initialValue: context.appState.value.routing.signIn)
 
-            self.interactor = interactor
-            self.appState = appState
+            self.context = context
 
             $router
-                .sink { appState[\.routing.signIn] = $0 }
+                .sink { context.appState[\.routing.signIn] = $0 }
                 .store(in: &cancelBag)
 
             appState.map(\.routing.signIn)
@@ -28,21 +26,20 @@ extension SignIn {
         func signInTapped() {
             isLoading = true
 
-            interactor.signIn()
-                .combineLatest(appState
+            interactors.signIn
+                .signIn().print()
+                .combineLatest(context.appState
                     .get(\.system.unhandledDeeplinks)
                     .setFailureType(to: Error.self)
                 )
                 .sink(receiveCompletion: { [weak self] _ in
                     self?.isLoading = false
-                }, receiveValue: { [unowned appState] token, urls in
-                    appState[\.user.token] = token
+                }, receiveValue: { [weak self] user, urls in
+                    self?.context.appState[\.user.token] = user.login
+
                     if urls.isEmpty {
                         print("continue to success")
-                        appState.set {
-                            $0.user.token = token
-                            $0.routing.signIn.path.append(Destination.success)
-                        }
+                        self?.context.appState[\.routing.signIn.path].append(Destination.success)
                     } else {
                         print("deeplink takeover next")
                     }
@@ -66,7 +63,7 @@ extension SignIn.Presenter {
 
     @ViewBuilder
     func tokenView() -> some View {
-        if let token = appState.value.user.token {
+        if let token = context.appState.value.user.token {
             Text(token)
         }
     }

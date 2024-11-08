@@ -1,42 +1,33 @@
 import SwiftUI
 import Combine
 
-protocol RootDependency {
-    var appState: AppStateSubject { get }
-}
-
-extension AppContext: RootDependency {}
-
 extension RootView {
-    class Presenter: ObservableObject {
-        private let dependency: RootDependency
+    class Presenter: ObservableObject, Presentable {
+        let context: AppContext
         private var cancelBag = CancelBag()
 
         @Published var router: Routing
 
-        init(dependency: RootDependency) {
-            self.dependency = dependency
-            _router = .init(initialValue: dependency.appState.value.routing.root)
+        init(context: AppContext) {
+            self.context = context
+
+            _router = .init(initialValue: context.appState.value.routing.root)
 
             $router
-                .sink { dependency.appState[\.routing.root] = $0 }
+                .sink { context.appState[\.routing.root] = $0 }
                 .store(in: &cancelBag)
 
-            dependency
-                .appState.map(\.routing.root)
+            appState.map(\.routing.root)
                 .weaklyAssign(to: self, \.router)
                 .store(in: &cancelBag)
         }
 
         func signInView() -> some View {
-            SignIn(presenter: .init(
-                interactor: SignIn.Interactor(),
-                appState: dependency.appState
-            ))
+            SignIn(presenter: .init(context: context))
         }
 
         func testDeeplink() {
-            dependency.appState[\.routing.root.forceUpdateSheet] = false
+            appState[\.routing.root.forceUpdateSheet] = false
             UIApplication.shared.open(URL(string: "viper://user/test")!)
         }
     }

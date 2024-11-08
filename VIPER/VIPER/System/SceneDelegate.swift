@@ -10,15 +10,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
-            let context = AppContext.instance()
-            let view = RootView(presenter: .init(
-                dependency: context
-            ))
+            let (context, systemEventHandler) = AppContext.build()
+            let view = RootView(presenter: .init(context: context))
 
             window.rootViewController = UIHostingController(rootView: view)
             window.makeKeyAndVisible()
 
-            self.systemEventsHandler = context.systemEventsHandler
+            self.systemEventsHandler = systemEventHandler
             self.window = window
         }
     }

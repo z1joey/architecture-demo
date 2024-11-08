@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D480761F2CDC171400E097A3 /* SignInRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480761E2CDC171400E097A3 /* SignInRouting.swift */; };
-		D48076232CDC1A9C00E097A3 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076222CDC1A9C00E097A3 /* Buildable.swift */; };
 		D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */; };
 		D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076272CDC2F3900E097A3 /* RootPresenter.swift */; };
 		D480762A2CDC334400E097A3 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076292CDC334400E097A3 /* AppContext.swift */; };
@@ -16,7 +15,13 @@
 		D480762E2CDD203300E097A3 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762D2CDD203300E097A3 /* DeepLink.swift */; };
 		D48076302CDD215C00E097A3 /* ForceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762F2CDD215C00E097A3 /* ForceUpdate.swift */; };
 		D48076322CDE3B8900E097A3 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076312CDE3B8900E097A3 /* HTTP.swift */; };
-		D48076352CDE3C3100E097A3 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076342CDE3C3100E097A3 /* Requestable.swift */; };
+		D48076352CDE3C3100E097A3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076342CDE3C3100E097A3 /* APIRequest.swift */; };
+		D48076392CDE461400E097A3 /* SignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076382CDE461400E097A3 /* SignInProvider.swift */; };
+		D480763B2CDE48D600E097A3 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480763A2CDE48D600E097A3 /* APICaller.swift */; };
+		D480763E2CDE4F8B00E097A3 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480763D2CDE4F8B00E097A3 /* GitHubUser.swift */; };
+		D48076432CDE59A200E097A3 /* AppContext+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076422CDE59A200E097A3 /* AppContext+Mock.swift */; };
+		D48076452CDEA18900E097A3 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076442CDEA18900E097A3 /* Security.swift */; };
+		D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076462CDEAB5400E097A3 /* Presentable.swift */; };
 		D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3BA2CD7A7690021DAF2 /* RootView.swift */; };
 		D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */; };
 		D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3C02CD7A76A0021DAF2 /* Preview Assets.xcassets */; };
@@ -53,7 +58,6 @@
 
 /* Begin PBXFileReference section */
 		D480761E2CDC171400E097A3 /* SignInRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouting.swift; sourceTree = "<group>"; };
-		D48076222CDC1A9C00E097A3 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
 		D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		D48076272CDC2F3900E097A3 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		D48076292CDC334400E097A3 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
@@ -61,7 +65,13 @@
 		D480762D2CDD203300E097A3 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
 		D480762F2CDD215C00E097A3 /* ForceUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate.swift; sourceTree = "<group>"; };
 		D48076312CDE3B8900E097A3 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
-		D48076342CDE3C3100E097A3 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		D48076342CDE3C3100E097A3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D48076382CDE461400E097A3 /* SignInProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProvider.swift; sourceTree = "<group>"; };
+		D480763A2CDE48D600E097A3 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		D480763D2CDE4F8B00E097A3 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		D48076422CDE59A200E097A3 /* AppContext+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppContext+Mock.swift"; sourceTree = "<group>"; };
+		D48076442CDEA18900E097A3 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		D48076462CDEAB5400E097A3 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		D48FA3B52CD7A7690021DAF2 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48FA3BA2CD7A7690021DAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,9 +123,18 @@
 			isa = PBXGroup;
 			children = (
 				D48076312CDE3B8900E097A3 /* HTTP.swift */,
-				D48076342CDE3C3100E097A3 /* Requestable.swift */,
+				D480763A2CDE48D600E097A3 /* APICaller.swift */,
+				D48076342CDE3C3100E097A3 /* APIRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D480763C2CDE4F7800E097A3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D480763D2CDE4F8B00E097A3 /* GitHubUser.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D48FA3AC2CD7A7690021DAF2 = {
@@ -143,6 +162,7 @@
 			children = (
 				D48FA41F2CDA517C0021DAF2 /* Info.plist */,
 				D48076332CDE3C1600E097A3 /* Networking */,
+				D480763C2CDE4F7800E097A3 /* Entity */,
 				D48FA41A2CDA30E10021DAF2 /* Utilities */,
 				D48FA3F72CD7B6650021DAF2 /* Extension */,
 				D48FA3E52CD7A7980021DAF2 /* System */,
@@ -184,10 +204,11 @@
 			children = (
 				D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */,
 				D48FA3E32CD7A7940021DAF2 /* SceneDelegate.swift */,
+				D48076442CDEA18900E097A3 /* Security.swift */,
 				D48FA3E62CD7A7B20021DAF2 /* AppDelegate.swift */,
 				D48076292CDC334400E097A3 /* AppContext.swift */,
+				D48076422CDE59A200E097A3 /* AppContext+Mock.swift */,
 				D48FA3FA2CD7D2500021DAF2 /* AppState.swift */,
-				D480762D2CDD203300E097A3 /* DeepLink.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -211,6 +232,7 @@
 				D480761E2CDC171400E097A3 /* SignInRouting.swift */,
 				D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */,
 				D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */,
+				D48076382CDE461400E097A3 /* SignInProvider.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -236,7 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				D48FA42D2CDBFCFB0021DAF2 /* Loadable.swift */,
-				D48076222CDC1A9C00E097A3 /* Buildable.swift */,
+				D48076462CDEAB5400E097A3 /* Presentable.swift */,
+				D480762D2CDD203300E097A3 /* DeepLink.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -374,14 +397,18 @@
 				D480762C2CDCF37800E097A3 /* RootRouter.swift in Sources */,
 				D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */,
 				D48FA3EC2CD7AE9B0021DAF2 /* SignIn.swift in Sources */,
+				D48076432CDE59A200E097A3 /* AppContext+Mock.swift in Sources */,
 				D48FA42C2CDBB4680021DAF2 /* Combine+.swift in Sources */,
 				D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */,
-				D48076352CDE3C3100E097A3 /* Requestable.swift in Sources */,
+				D48076352CDE3C3100E097A3 /* APIRequest.swift in Sources */,
+				D480763E2CDE4F8B00E097A3 /* GitHubUser.swift in Sources */,
 				D48FA3E72CD7A7B20021DAF2 /* AppDelegate.swift in Sources */,
 				D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */,
 				D480762E2CDD203300E097A3 /* DeepLink.swift in Sources */,
 				D48FA42E2CDBFCFB0021DAF2 /* Loadable.swift in Sources */,
 				D480762A2CDC334400E097A3 /* AppContext.swift in Sources */,
+				D48076452CDEA18900E097A3 /* Security.swift in Sources */,
+				D48076392CDE461400E097A3 /* SignInProvider.swift in Sources */,
 				D48FA4262CDADB860021DAF2 /* SystemEventsHandler.swift in Sources */,
 				D48FA4172CD943B90021DAF2 /* Success.swift in Sources */,
 				D48FA3FB2CD7D2500021DAF2 /* AppState.swift in Sources */,
@@ -389,7 +416,8 @@
 				D48076302CDD215C00E097A3 /* ForceUpdate.swift in Sources */,
 				D48FA3F12CD7AFD70021DAF2 /* SignInInteractor.swift in Sources */,
 				D48076322CDE3B8900E097A3 /* HTTP.swift in Sources */,
-				D48076232CDC1A9C00E097A3 /* Buildable.swift in Sources */,
+				D480763B2CDE48D600E097A3 /* APICaller.swift in Sources */,
+				D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */,
 				D48FA3E42CD7A7940021DAF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
