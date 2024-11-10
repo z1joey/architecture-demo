@@ -34,7 +34,6 @@
 		D48FA3E42CD7A7940021DAF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3E32CD7A7940021DAF2 /* SceneDelegate.swift */; };
 		D48FA3E72CD7A7B20021DAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3E62CD7A7B20021DAF2 /* AppDelegate.swift */; };
 		D48FA3EC2CD7AE9B0021DAF2 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3EB2CD7AE9B0021DAF2 /* SignIn.swift */; };
-		D48FA3F12CD7AFD70021DAF2 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */; };
 		D48FA3FB2CD7D2500021DAF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3FA2CD7D2500021DAF2 /* AppState.swift */; };
 		D48FA4172CD943B90021DAF2 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4162CD943B90021DAF2 /* Success.swift */; };
 		D48FA4262CDADB860021DAF2 /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */; };
@@ -94,7 +93,6 @@
 		D48FA3E32CD7A7940021DAF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D48FA3E62CD7A7B20021DAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48FA3EB2CD7AE9B0021DAF2 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
-		D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		D48FA3FA2CD7D2500021DAF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D48FA4162CD943B90021DAF2 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		D48FA41F2CDA517C0021DAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			children = (
 				D48FA4152CD943980021DAF2 /* Screens */,
 				D480761E2CDC171400E097A3 /* SignInRouting.swift */,
-				D48FA3F02CD7AFD70021DAF2 /* SignInInteractor.swift */,
 				D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */,
 				D48076382CDE461400E097A3 /* SignInProvider.swift */,
 			);
@@ -464,7 +461,6 @@
 				D48FA3FB2CD7D2500021DAF2 /* AppState.swift in Sources */,
 				D480761F2CDC171400E097A3 /* SignInRouting.swift in Sources */,
 				D48076302CDD215C00E097A3 /* ForceUpdate.swift in Sources */,
-				D48FA3F12CD7AFD70021DAF2 /* SignInInteractor.swift in Sources */,
 				D48076322CDE3B8900E097A3 /* HTTP.swift in Sources */,
 				D480763B2CDE48D600E097A3 /* APICaller.swift in Sources */,
 				D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */,

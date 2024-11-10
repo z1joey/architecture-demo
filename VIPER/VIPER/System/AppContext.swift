@@ -1,33 +1,29 @@
 import Combine
 import Foundation
 
-protocol InteractorSet {
-    var signIn: SignIn.Interactor { get }
+protocol DataAccess {
+    var signInProvider: SignInProvider { get }
 }
 
 struct AppContext {
     let appState: AppStateSubject
-    let interactors: InteractorSet
+    let dataAccess: DataAccess
 
     private let systemEventsHandler: SystemEventsHandling
 
-    init(appState: AppStateSubject, interactors: InteractorSet, systemEventsHandler: SystemEventsHandling) {
+    init(appState: AppStateSubject, dataAccess: DataAccess, systemEventsHandler: SystemEventsHandling) {
         self.appState = appState
-        self.interactors = interactors
+        self.dataAccess = dataAccess
         self.systemEventsHandler = systemEventsHandler
     }
 }
 
 extension AppContext {
-    class Interactors: InteractorSet {
-        lazy var signIn: SignIn.Interactor = {
-            let signInProvider = RealSignInProvider(
-                session: configuredURLSession(),
-                baseURL: Environment.apiBaseURL
-            )
-
-            return SignIn.Interactor(provider: signInProvider)
-        }()
+    class RealDataAccess: DataAccess {
+        lazy var signInProvider: SignInProvider = RealSignInProvider(
+            session: configuredURLSession(),
+            baseURL: Environment.apiBaseURL
+        )
     }
 }
 
@@ -36,10 +32,9 @@ extension AppContext {
 extension AppContext {
     static func buildWithAppState(_ appState: AppStateSubject) -> (Self, SystemEventsHandling) {
         let systemEventsHandler = SystemEventsHandler(appState: appState)
-        let interactors = Interactors()
         let context = AppContext(
             appState: appState,
-            interactors: interactors,
+            dataAccess: RealDataAccess(),
             systemEventsHandler: systemEventsHandler
         )
 

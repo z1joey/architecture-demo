@@ -26,7 +26,7 @@ extension SignIn {
         func signInTapped() {
             isLoading = true
 
-            interactors.signIn
+            dataAccess.signInProvider
                 .signIn().print()
                 .combineLatest(context.appState
                     .get(\.system.unhandledDeeplinks)

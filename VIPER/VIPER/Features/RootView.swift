@@ -32,9 +32,9 @@ struct RootView: View {
                 }
             }
         }
-        .onLongPressGesture(minimumDuration: 2) {
-            presenter.showDebugMenu()
-        }
+//        .onLongPressGesture(minimumDuration: 2) {
+//            presenter.showDebugMenu()
+//        }
         .sheet(isPresented: $presenter.router.debugMenuSheet) {
             DebugMenu()
                 .presentationDetents([.medium, .large])

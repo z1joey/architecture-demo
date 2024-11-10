@@ -7,7 +7,7 @@ extension Presentable {
         context.appState
     }
 
-    var interactors: InteractorSet {
-        context.interactors
+    var dataAccess: DataAccess {
+        context.dataAccess
     }
 }

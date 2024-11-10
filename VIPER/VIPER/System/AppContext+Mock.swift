@@ -4,19 +4,16 @@ extension AppContext {
     static func mock() -> Self {
         let appState = AppStateSubject(AppState())
         let systemEventsHandler = SystemEventsHandler(appState: appState)
-        let interactors = FakeInteractors()
         return AppContext(
             appState: appState,
-            interactors: interactors,
+            dataAccess: FakeDataAccess(),
             systemEventsHandler: systemEventsHandler
         )
     }
 }
 
-class FakeInteractors: InteractorSet {
-    lazy var signIn: SignIn.Interactor = {
-        return SignIn.Interactor(provider: FakeSignInProvider())
-    }()
+class FakeDataAccess: DataAccess {
+    lazy var signInProvider: SignInProvider = FakeSignInProvider()
 }
 
 struct FakeSignInProvider: SignInProvider {
