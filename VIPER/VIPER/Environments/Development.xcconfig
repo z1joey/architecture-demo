@@ -1,5 +1,6 @@
 // Server URL
 API_BASE_URL = https:/$()/api.github.com
+DEEPLINK_BASE_URL = viper-dev:/$()/
 
 // Keys
 API_KEY = 783u9djd8a_hkzos7jd803001nd

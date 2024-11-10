@@ -6,6 +6,7 @@ public enum Environment {
         enum Plist {
             static let apiBaseURL = "API_BASE_URL"
             static let apiKey = "API_KEY"
+            static let deeplinkBaseURL = "DEEPLINK_BASE_URL"
         }
     }
 
@@ -20,7 +21,7 @@ public enum Environment {
     // MARK: - Plist values
     static let apiBaseURL: String = {
         guard let url = Environment.infoDictionary[Keys.Plist.apiBaseURL] as? String else {
-            fatalError("Root URL not set in plist for this environment")
+            fatalError("API base url not set in plist for this environment")
         }
 
         return url
@@ -31,5 +32,13 @@ public enum Environment {
             fatalError("API Key not set in plist for this environment")
         }
         return apiKey
+    }()
+
+    static let deeplinkBaseURL: String = {
+        guard let url = Environment.infoDictionary[Keys.Plist.deeplinkBaseURL] as? String else {
+            fatalError("Deeplink base url not set in plist for this environment")
+        }
+
+        return url
     }()
 }
