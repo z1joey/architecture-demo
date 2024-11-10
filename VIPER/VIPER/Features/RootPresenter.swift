@@ -31,8 +31,8 @@ extension RootView {
             UIApplication.shared.open(URL(string: "viper://user/test")!)
         }
 
-        func didDismissDebugMenu() {
-            appState[\.routing.root.debugMenuSheet] = false
+        func showDebugMenu() {
+            appState[\.routing.root.debugMenuSheet] = true
         }
     }
 }

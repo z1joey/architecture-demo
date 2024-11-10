@@ -1,0 +1,9 @@
+// Server URL
+API_BASE_URL = https:/$()/www.viper.com
+
+// Keys
+API_KEY = 9ud0930djd_md9zdjdko3830lb0d
+
+// App Settings
+APP_NAME = VIPER
+APP_BUNDLE_ID = com.appsym.viper

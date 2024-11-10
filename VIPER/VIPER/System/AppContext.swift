@@ -37,22 +37,22 @@ extension AppContext {
 
     static func configuredInteractors() -> Interactors {
         let signInProvider = RealSignInProvider(
-            session: AppContext.configuredURLSession(),
-            baseURL: "https://api.github.com"
+            session: configuredURLSession(),
+            baseURL: Environment.apiBaseURL
         )
         return Interactors(
             signIn: SignIn.Interactor(provider: signInProvider)
         )
     }
+}
 
-    static func configuredURLSession() -> URLSession {
-        let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 60
-        configuration.timeoutIntervalForResource = 120
-        configuration.waitsForConnectivity = true
-        configuration.httpMaximumConnectionsPerHost = 5
-        configuration.requestCachePolicy = .returnCacheDataElseLoad
-        configuration.urlCache = .shared
-        return URLSession(configuration: configuration)
-    }
+private func configuredURLSession() -> URLSession {
+    let configuration = URLSessionConfiguration.default
+    configuration.timeoutIntervalForRequest = 60
+    configuration.timeoutIntervalForResource = 120
+    configuration.waitsForConnectivity = true
+    configuration.httpMaximumConnectionsPerHost = 5
+    configuration.requestCachePolicy = .returnCacheDataElseLoad
+    configuration.urlCache = .shared
+    return URLSession(configuration: configuration)
 }
