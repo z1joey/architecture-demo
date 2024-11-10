@@ -30,31 +30,6 @@ func writeSecureData() {
     try? data.write(to: URL(fileURLWithPath: filePath), options: .completeFileProtection)
 }
 
-func saveToKeychain(key: String, data: Data) -> Bool {
-    let query: [String: Any] = [
-        kSecClass as String: kSecClassGenericPassword,
-        kSecAttrAccount as String: key,
-        kSecValueData as String: data
-    ]
-
-    SecItemDelete(query as CFDictionary)
-    let status = SecItemAdd(query as CFDictionary, nil)
-    return status == errSecSuccess
-}
-
-func getFromKeychain(key: String) -> Data? {
-    let query: [String: Any] = [
-        kSecClass as String: kSecClassGenericPassword,
-        kSecAttrAccount as String: key,
-        kSecReturnData as String: kCFBooleanTrue!,
-        kSecMatchLimit as String: kSecMatchLimitOne
-    ]
-
-    var item: CFTypeRef?
-    let status = SecItemCopyMatching(query as CFDictionary, &item)
-    return status == errSecSuccess ? (item as? Data) : nil
-}
-
 import AuthenticationServices
 
 class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {

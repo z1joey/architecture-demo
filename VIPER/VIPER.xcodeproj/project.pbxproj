@@ -23,6 +23,7 @@
 		D48076452CDEA18900E097A3 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076442CDEA18900E097A3 /* Security.swift */; };
 		D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076462CDEAB5400E097A3 /* Presentable.swift */; };
 		D480764B2CE0625B00E097A3 /* DebugMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480764A2CE0625B00E097A3 /* DebugMenu.swift */; };
+		D480764E2CE0804400E097A3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480764D2CE0804400E097A3 /* Keychain.swift */; };
 		D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3BA2CD7A7690021DAF2 /* RootView.swift */; };
 		D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */; };
 		D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3C02CD7A76A0021DAF2 /* Preview Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		D48076442CDEA18900E097A3 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		D48076462CDEAB5400E097A3 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		D480764A2CE0625B00E097A3 /* DebugMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenu.swift; sourceTree = "<group>"; };
+		D480764D2CE0804400E097A3 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		D48FA3B52CD7A7690021DAF2 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48FA3BA2CD7A7690021DAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 			path = ForceUpdate;
 			sourceTree = "<group>";
 		};
+		D480764C2CE0803600E097A3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D480764D2CE0804400E097A3 /* Keychain.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		D48FA3AC2CD7A7690021DAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		D48FA3B72CD7A7690021DAF2 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D480764C2CE0803600E097A3 /* Persistence */,
 				D48FA41F2CDA517C0021DAF2 /* Info.plist */,
 				D48076332CDE3C1600E097A3 /* Networking */,
 				D480763C2CDE4F7800E097A3 /* Entity */,
@@ -427,6 +438,7 @@
 				D480762E2CDD203300E097A3 /* DeepLink.swift in Sources */,
 				D48FA42E2CDBFCFB0021DAF2 /* Loadable.swift in Sources */,
 				D480762A2CDC334400E097A3 /* AppContext.swift in Sources */,
+				D480764E2CE0804400E097A3 /* Keychain.swift in Sources */,
 				D48076452CDEA18900E097A3 /* Security.swift in Sources */,
 				D48076392CDE461400E097A3 /* SignInProvider.swift in Sources */,
 				D48FA4262CDADB860021DAF2 /* SystemEventsHandler.swift in Sources */,
