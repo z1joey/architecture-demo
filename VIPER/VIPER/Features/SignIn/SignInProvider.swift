@@ -20,14 +20,6 @@ struct RealSignInProvider: SignInProvider, APICaller {
     }
 }
 
-struct FakeSignInProvider: SignInProvider {
-    func signIn() -> AnyPublisher<GitHubUser, Error> {
-        Just(GitHubUser(login: "", avatarUrl: "", bio: ""))
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-}
-
 private extension RealSignInProvider {
     enum API: APIRequest {
         case signIn

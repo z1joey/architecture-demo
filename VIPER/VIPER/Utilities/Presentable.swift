@@ -7,7 +7,7 @@ extension Presentable {
         context.appState
     }
 
-    var interactors: AppContext.Interactors {
+    var interactors: InteractorSet {
         context.interactors
     }
 }

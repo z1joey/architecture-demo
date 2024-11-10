@@ -1,13 +1,17 @@
 import Combine
 import Foundation
 
+protocol InteractorSet {
+    var signIn: SignIn.Interactor { get }
+}
+
 struct AppContext {
     let appState: AppStateSubject
-    let interactors: Interactors
+    let interactors: InteractorSet
 
     private let systemEventsHandler: SystemEventsHandling
 
-    init(appState: AppStateSubject, interactors: Interactors, systemEventsHandler: SystemEventsHandling) {
+    init(appState: AppStateSubject, interactors: InteractorSet, systemEventsHandler: SystemEventsHandling) {
         self.appState = appState
         self.interactors = interactors
         self.systemEventsHandler = systemEventsHandler
@@ -15,8 +19,15 @@ struct AppContext {
 }
 
 extension AppContext {
-    struct Interactors {
-        let signIn: SignInInteractor
+    class Interactors: InteractorSet {
+        lazy var signIn: SignIn.Interactor = {
+            let signInProvider = RealSignInProvider(
+                session: configuredURLSession(),
+                baseURL: Environment.apiBaseURL
+            )
+
+            return SignIn.Interactor(provider: signInProvider)
+        }()
     }
 }
 
@@ -25,7 +36,7 @@ extension AppContext {
 extension AppContext {
     static func buildWithAppState(_ appState: AppStateSubject) -> (Self, SystemEventsHandling) {
         let systemEventsHandler = SystemEventsHandler(appState: appState)
-        let interactors = configuredInteractors()
+        let interactors = Interactors()
         let context = AppContext(
             appState: appState,
             interactors: interactors,
@@ -33,16 +44,6 @@ extension AppContext {
         )
 
         return (context, systemEventsHandler)
-    }
-
-    static func configuredInteractors() -> Interactors {
-        let signInProvider = RealSignInProvider(
-            session: configuredURLSession(),
-            baseURL: Environment.apiBaseURL
-        )
-        return Interactors(
-            signIn: SignIn.Interactor(provider: signInProvider)
-        )
     }
 }
 
