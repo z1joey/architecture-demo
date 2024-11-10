@@ -4,6 +4,7 @@ import Combine
 extension SignIn {
     class Presenter: ObservableObject, Presentable {
         let context: AppContext
+        let interactor: SignInInteractor?
         private var cancelBag = CancelBag()
 
         @Published var router: Routing
@@ -13,6 +14,7 @@ extension SignIn {
             _router = .init(initialValue: context.appState.value.routing.signIn)
 
             self.context = context
+            self.interactor = context.interactors.signIn
 
             $router
                 .sink { context.appState[\.routing.signIn] = $0 }

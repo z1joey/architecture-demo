@@ -23,8 +23,7 @@ extension AppContext {
 //MARK: Static
 
 extension AppContext {
-    static func build() -> (Self, SystemEventsHandling) {
-        let appState = AppStateSubject(AppState())
+    static func buildWithAppState(_ appState: AppStateSubject) -> (Self, SystemEventsHandling) {
         let systemEventsHandler = SystemEventsHandler(appState: appState)
         let interactors = configuredInteractors()
         let context = AppContext(

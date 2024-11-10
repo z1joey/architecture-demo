@@ -1,20 +1,39 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var systemEventsHandler: SystemEventsHandling? = {
         self.systemEventsHandler(UIApplication.shared)
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("didFinishLaunchingWithOptions")
+//        if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+//            switch shortcutItem.type {
+//            case "com.appsym.viper.debugMenu":
+//                print("debug menu tapped")
+//            default: break
+//            }
+//        }
 
         return true
     }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        print("connectingSceneSession")
         let sceneConfig: UISceneConfiguration = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
         sceneConfig.delegateClass = SceneDelegate.self
         return sceneConfig
+    }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        print("performActionFor")
+//        switch shortcutItem.type {
+//        case "com.appsym.viper.debugMenu":
+//            print("debug menu tapped")
+//        default: break
+//        }
+//        completionHandler(true)
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

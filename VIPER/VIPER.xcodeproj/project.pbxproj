@@ -11,7 +11,7 @@
 		D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */; };
 		D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076272CDC2F3900E097A3 /* RootPresenter.swift */; };
 		D480762A2CDC334400E097A3 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076292CDC334400E097A3 /* AppContext.swift */; };
-		D480762C2CDCF37800E097A3 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762B2CDCF37800E097A3 /* RootRouter.swift */; };
+		D480762C2CDCF37800E097A3 /* RootRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762B2CDCF37800E097A3 /* RootRouting.swift */; };
 		D480762E2CDD203300E097A3 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762D2CDD203300E097A3 /* DeepLink.swift */; };
 		D48076302CDD215C00E097A3 /* ForceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480762F2CDD215C00E097A3 /* ForceUpdate.swift */; };
 		D48076322CDE3B8900E097A3 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076312CDE3B8900E097A3 /* HTTP.swift */; };
@@ -22,6 +22,7 @@
 		D48076432CDE59A200E097A3 /* AppContext+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076422CDE59A200E097A3 /* AppContext+Mock.swift */; };
 		D48076452CDEA18900E097A3 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076442CDEA18900E097A3 /* Security.swift */; };
 		D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076462CDEAB5400E097A3 /* Presentable.swift */; };
+		D480764B2CE0625B00E097A3 /* DebugMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480764A2CE0625B00E097A3 /* DebugMenu.swift */; };
 		D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3BA2CD7A7690021DAF2 /* RootView.swift */; };
 		D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */; };
 		D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3C02CD7A76A0021DAF2 /* Preview Assets.xcassets */; };
@@ -61,7 +62,7 @@
 		D48076252CDC2BBA00E097A3 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		D48076272CDC2F3900E097A3 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		D48076292CDC334400E097A3 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
-		D480762B2CDCF37800E097A3 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		D480762B2CDCF37800E097A3 /* RootRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouting.swift; sourceTree = "<group>"; };
 		D480762D2CDD203300E097A3 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
 		D480762F2CDD215C00E097A3 /* ForceUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate.swift; sourceTree = "<group>"; };
 		D48076312CDE3B8900E097A3 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		D48076422CDE59A200E097A3 /* AppContext+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppContext+Mock.swift"; sourceTree = "<group>"; };
 		D48076442CDEA18900E097A3 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		D48076462CDEAB5400E097A3 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		D480764A2CE0625B00E097A3 /* DebugMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenu.swift; sourceTree = "<group>"; };
 		D48FA3B52CD7A7690021DAF2 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48FA3BA2CD7A7690021DAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,22 @@
 				D480763D2CDE4F8B00E097A3 /* GitHubUser.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D48076482CE0622B00E097A3 /* DebugMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D480764A2CE0625B00E097A3 /* DebugMenu.swift */,
+			);
+			path = DebugMenu;
+			sourceTree = "<group>";
+		};
+		D48076492CE0623A00E097A3 /* ForceUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				D480762F2CDD215C00E097A3 /* ForceUpdate.swift */,
+			);
+			path = ForceUpdate;
 			sourceTree = "<group>";
 		};
 		D48FA3AC2CD7A7690021DAF2 = {
@@ -202,9 +220,9 @@
 		D48FA3E52CD7A7980021DAF2 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				D48076442CDEA18900E097A3 /* Security.swift */,
 				D48FA4252CDADB860021DAF2 /* SystemEventsHandler.swift */,
 				D48FA3E32CD7A7940021DAF2 /* SceneDelegate.swift */,
-				D48076442CDEA18900E097A3 /* Security.swift */,
 				D48FA3E62CD7A7B20021DAF2 /* AppDelegate.swift */,
 				D48076292CDC334400E097A3 /* AppContext.swift */,
 				D48076422CDE59A200E097A3 /* AppContext+Mock.swift */,
@@ -217,10 +235,11 @@
 			isa = PBXGroup;
 			children = (
 				D48FA3BA2CD7A7690021DAF2 /* RootView.swift */,
-				D480762B2CDCF37800E097A3 /* RootRouter.swift */,
+				D480762B2CDCF37800E097A3 /* RootRouting.swift */,
 				D48076272CDC2F3900E097A3 /* RootPresenter.swift */,
-				D480762F2CDD215C00E097A3 /* ForceUpdate.swift */,
 				D48FA3ED2CD7AF240021DAF2 /* SignIn */,
+				D48076482CE0622B00E097A3 /* DebugMenu */,
+				D48076492CE0623A00E097A3 /* ForceUpdate */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -394,10 +413,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D480762C2CDCF37800E097A3 /* RootRouter.swift in Sources */,
+				D480762C2CDCF37800E097A3 /* RootRouting.swift in Sources */,
 				D48076262CDC2BBA00E097A3 /* SignInPresenter.swift in Sources */,
 				D48FA3EC2CD7AE9B0021DAF2 /* SignIn.swift in Sources */,
 				D48076432CDE59A200E097A3 /* AppContext+Mock.swift in Sources */,
+				D480764B2CE0625B00E097A3 /* DebugMenu.swift in Sources */,
 				D48FA42C2CDBB4680021DAF2 /* Combine+.swift in Sources */,
 				D48076282CDC2F3900E097A3 /* RootPresenter.swift in Sources */,
 				D48076352CDE3C3100E097A3 /* APIRequest.swift in Sources */,

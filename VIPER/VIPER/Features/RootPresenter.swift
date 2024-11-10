@@ -30,5 +30,9 @@ extension RootView {
             appState[\.routing.root.forceUpdateSheet] = false
             UIApplication.shared.open(URL(string: "viper://user/test")!)
         }
+
+        func didDismissDebugMenu() {
+            appState[\.routing.root.debugMenuSheet] = false
+        }
     }
 }
