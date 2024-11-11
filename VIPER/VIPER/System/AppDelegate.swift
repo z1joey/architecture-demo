@@ -8,13 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("didFinishLaunchingWithOptions")
-//        if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
-//            switch shortcutItem.type {
-//            case "com.appsym.viper.debugMenu":
-//                print("debug menu tapped")
-//            default: break
-//            }
-//        }
 
         return true
     }

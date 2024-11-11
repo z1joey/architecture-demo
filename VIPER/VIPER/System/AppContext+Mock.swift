@@ -1,5 +1,6 @@
 import Combine
 
+#if DEBUG
 extension AppContext {
     static func mock() -> Self {
         let appState = AppStateSubject(AppState())
@@ -23,3 +24,4 @@ struct FakeSignInProvider: SignInProvider {
             .eraseToAnyPublisher()
     }
 }
+#endif

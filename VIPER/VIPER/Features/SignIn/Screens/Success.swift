@@ -14,8 +14,10 @@ struct Success: View {
     }
 }
 
+#if DEBUG
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
         Success()
     }
 }
+#endif

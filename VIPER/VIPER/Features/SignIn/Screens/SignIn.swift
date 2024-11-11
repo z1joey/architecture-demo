@@ -21,8 +21,10 @@ struct SignIn: View {
     }
 }
 
+#if DEBUG
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignIn(presenter: .init(context: AppContext.mock()))
     }
 }
+#endif

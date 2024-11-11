@@ -51,6 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 private extension SceneDelegate {
     func addDebugShortcutIfNeeded() {
+        #if DEBUG
         guard let shortcuts = UIApplication.shared.shortcutItems,
               shortcuts.isEmpty else {
             return
@@ -64,5 +65,6 @@ private extension SceneDelegate {
         )
 
         UIApplication.shared.shortcutItems?.append(debugMenu)
+        #endif
     }
 }

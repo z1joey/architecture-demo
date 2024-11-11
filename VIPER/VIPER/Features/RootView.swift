@@ -9,44 +9,46 @@ struct RootView: View {
     }
 
     var body: some View {
-        Group {
-            TabView(selection: $presenter.router.tab) {
-                Text("One")
-                    .tabItem {
-                        Label("One", systemImage: "star")
-                    }
-                    .tag(0)
-
-                Text("Two")
-                    .tabItem {
-                        Label("Two", systemImage: "circle")
-                    }
-                    .tag(1)
-            }
-            .fullScreenCover(isPresented: $presenter.router.forceUpdateSheet) {
-                ForceUpdate().environmentObject(presenter)
-            }
-            .overlay {
-                if presenter.router.signInSheet {
-                    presenter.signInView()
+        TabView(selection: $presenter.router.tab) {
+            Text("One")
+                .tabItem {
+                    Label("One", systemImage: "star")
                 }
+                .tag(0)
+            
+            Text("Two")
+                .tabItem {
+                    Label("Two", systemImage: "circle")
+                }
+                .tag(1)
+        }
+        .overlay {
+            if presenter.router.signInSheet {
+                presenter.signInView()
             }
         }
-//        .onLongPressGesture(minimumDuration: 2) {
-//            presenter.showDebugMenu()
-//        }
+        .fullScreenCover(isPresented: $presenter.router.forceUpdateSheet) {
+            ForceUpdate()
+                .environmentObject(presenter)
+        }
         .sheet(isPresented: $presenter.router.debugMenuSheet) {
             DebugMenu()
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
-
         }
+        #if DEBUG
+        .onTapGesture(count: 3) {
+            presenter.showDebugMenu()
+        }
+        #endif
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
 
     static var previews: some View {
         RootView(presenter: .init(context: AppContext.mock()))
     }
 }
+#endif
