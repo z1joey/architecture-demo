@@ -21,7 +21,7 @@ struct AppContext {
 extension AppContext {
     class RealDataAccess: DataAccess {
         lazy var signInProvider: SignInProvider = RealSignInProvider(
-            session: configuredURLSession(),
+            session: URLSession.configured,
             baseURL: Environment.apiBaseURL
         )
     }
@@ -30,7 +30,7 @@ extension AppContext {
 //MARK: Static
 
 extension AppContext {
-    static func buildWithAppState(_ appState: AppStateSubject) -> (Self, SystemEventsHandling) {
+    static func build(withAppState appState: AppStateSubject) -> (Self, SystemEventsHandling) {
         let systemEventsHandler = SystemEventsHandler(appState: appState)
         let context = AppContext(
             appState: appState,
@@ -42,13 +42,15 @@ extension AppContext {
     }
 }
 
-private func configuredURLSession() -> URLSession {
-    let configuration = URLSessionConfiguration.default
-    configuration.timeoutIntervalForRequest = 60
-    configuration.timeoutIntervalForResource = 120
-    configuration.waitsForConnectivity = true
-    configuration.httpMaximumConnectionsPerHost = 5
-    configuration.requestCachePolicy = .returnCacheDataElseLoad
-    configuration.urlCache = .shared
-    return URLSession(configuration: configuration)
+private extension URLSession {
+    static var configured: URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForResource = 60
+        configuration.waitsForConnectivity = true
+        configuration.httpMaximumConnectionsPerHost = 5
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        configuration.urlCache = .shared
+        return URLSession(configuration: configuration)
+    }
 }

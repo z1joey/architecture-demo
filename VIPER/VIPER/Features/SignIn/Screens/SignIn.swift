@@ -6,7 +6,7 @@ struct SignIn: View {
     var body: some View {
         NavigationStack(path: $presenter.router.path) {
             VStack {
-                Button(presenter.isLoading ? "Signing In" : "Sign In") {
+                Button(presenter.isLoading ? tr("signing_in") : tr("sign_in")) {
                     presenter.signInTapped()
                 }
                 .disabled(presenter.isLoading)
@@ -25,6 +25,7 @@ struct SignIn: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignIn(presenter: .init(context: AppContext.mock()))
+            .environment(\.locale, .init(identifier: "zh_CN"))
     }
 }
 #endif

@@ -25,6 +25,8 @@
 		D480764B2CE0625B00E097A3 /* DebugMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480764A2CE0625B00E097A3 /* DebugMenu.swift */; };
 		D480764E2CE0804400E097A3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480764D2CE0804400E097A3 /* Keychain.swift */; };
 		D48076652CE1024700E097A3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076642CE1024700E097A3 /* Environment.swift */; };
+		D48076682CE2028A00E097A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D480766A2CE2028A00E097A3 /* Localizable.strings */; };
+		D480766F2CE207CA00E097A3 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480766E2CE207CA00E097A3 /* Localization.swift */; };
 		D48FA3BB2CD7A7690021DAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FA3BA2CD7A7690021DAF2 /* RootView.swift */; };
 		D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */; };
 		D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48FA3C02CD7A76A0021DAF2 /* Preview Assets.xcassets */; };
@@ -80,6 +82,9 @@
 		D48076612CE08DF200E097A3 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		D48076622CE08E0300E097A3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		D48076642CE1024700E097A3 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D48076692CE2028A00E097A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D480766B2CE2028E00E097A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D480766E2CE207CA00E097A3 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		D48FA3B52CD7A7690021DAF2 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48FA3BA2CD7A7690021DAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48FA3BC2CD7A76A0021DAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				D48FA41F2CDA517C0021DAF2 /* Info.plist */,
+				D480766A2CE2028A00E097A3 /* Localizable.strings */,
 				D48076632CE08E1100E097A3 /* Environments */,
 				D480764C2CE0803600E097A3 /* Persistence */,
 				D48076332CDE3C1600E097A3 /* Networking */,
@@ -304,6 +310,7 @@
 				D48FA42D2CDBFCFB0021DAF2 /* Loadable.swift */,
 				D48076462CDEAB5400E097A3 /* Presentable.swift */,
 				D480762D2CDD203300E097A3 /* DeepLink.swift */,
+				D480766E2CE207CA00E097A3 /* Localization.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,6 +401,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D48FA3AC2CD7A7690021DAF2;
 			productRefGroup = D48FA3B62CD7A7690021DAF2 /* Products */;
@@ -413,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48FA3C12CD7A76A0021DAF2 /* Preview Assets.xcassets in Resources */,
+				D48076682CE2028A00E097A3 /* Localizable.strings in Resources */,
 				D48FA3BD2CD7A76A0021DAF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +473,7 @@
 				D48076322CDE3B8900E097A3 /* HTTP.swift in Sources */,
 				D480763B2CDE48D600E097A3 /* APICaller.swift in Sources */,
 				D48076472CDEAB5400E097A3 /* Presentable.swift in Sources */,
+				D480766F2CE207CA00E097A3 /* Localization.swift in Sources */,
 				D48FA3E42CD7A7940021DAF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +509,18 @@
 			targetProxy = D48FA3D12CD7A76A0021DAF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D480766A2CE2028A00E097A3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D48076692CE2028A00E097A3 /* en */,
+				D480766B2CE2028E00E097A3 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D480764F2CE089B500E097A3 /* Debug(STG) */ = {
