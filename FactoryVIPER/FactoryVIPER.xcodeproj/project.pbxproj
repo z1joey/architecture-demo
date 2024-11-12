@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D48076C02CE33E8200E097A3 /* FactoryVIPERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */; };
+		D48076C22CE33E8200E097A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076C12CE33E8200E097A3 /* ContentView.swift */; };
+		D48076C42CE33E8300E097A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48076C32CE33E8300E097A3 /* Assets.xcassets */; };
+		D48076C82CE33E8300E097A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48076C72CE33E8300E097A3 /* Preview Assets.xcassets */; };
+		D48076D22CE33E8300E097A3 /* FactoryVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076D12CE33E8300E097A3 /* FactoryVIPERTests.swift */; };
+		D48076DC2CE33E8300E097A3 /* FactoryVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076DB2CE33E8300E097A3 /* FactoryVIPERUITests.swift */; };
+		D48076DE2CE33E8300E097A3 /* FactoryVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076DD2CE33E8300E097A3 /* FactoryVIPERUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D48076CE2CE33E8300E097A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48076B42CE33E8200E097A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48076BB2CE33E8200E097A3;
+			remoteInfo = FactoryVIPER;
+		};
+		D48076D82CE33E8300E097A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48076B42CE33E8200E097A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48076BB2CE33E8200E097A3;
+			remoteInfo = FactoryVIPER;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D48076BC2CE33E8200E097A3 /* FactoryVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVIPERApp.swift; sourceTree = "<group>"; };
+		D48076C12CE33E8200E097A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D48076C32CE33E8300E097A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D48076C52CE33E8300E097A3 /* FactoryVIPER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FactoryVIPER.entitlements; sourceTree = "<group>"; };
+		D48076C72CE33E8300E097A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D48076CD2CE33E8300E097A3 /* FactoryVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48076D12CE33E8300E097A3 /* FactoryVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVIPERTests.swift; sourceTree = "<group>"; };
+		D48076D72CE33E8300E097A3 /* FactoryVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48076DB2CE33E8300E097A3 /* FactoryVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVIPERUITests.swift; sourceTree = "<group>"; };
+		D48076DD2CE33E8300E097A3 /* FactoryVIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D48076B92CE33E8200E097A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076CA2CE33E8300E097A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076D42CE33E8300E097A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D48076B32CE33E8200E097A3 = {
+			isa = PBXGroup;
+			children = (
+				D48076BE2CE33E8200E097A3 /* FactoryVIPER */,
+				D48076D02CE33E8300E097A3 /* FactoryVIPERTests */,
+				D48076DA2CE33E8300E097A3 /* FactoryVIPERUITests */,
+				D48076BD2CE33E8200E097A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D48076BD2CE33E8200E097A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D48076BC2CE33E8200E097A3 /* FactoryVIPER.app */,
+				D48076CD2CE33E8300E097A3 /* FactoryVIPERTests.xctest */,
+				D48076D72CE33E8300E097A3 /* FactoryVIPERUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D48076BE2CE33E8200E097A3 /* FactoryVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */,
+				D48076C12CE33E8200E097A3 /* ContentView.swift */,
+				D48076C32CE33E8300E097A3 /* Assets.xcassets */,
+				D48076C52CE33E8300E097A3 /* FactoryVIPER.entitlements */,
+				D48076C62CE33E8300E097A3 /* Preview Content */,
+			);
+			path = FactoryVIPER;
+			sourceTree = "<group>";
+		};
+		D48076C62CE33E8300E097A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D48076C72CE33E8300E097A3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D48076D02CE33E8300E097A3 /* FactoryVIPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				D48076D12CE33E8300E097A3 /* FactoryVIPERTests.swift */,
+			);
+			path = FactoryVIPERTests;
+			sourceTree = "<group>";
+		};
+		D48076DA2CE33E8300E097A3 /* FactoryVIPERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D48076DB2CE33E8300E097A3 /* FactoryVIPERUITests.swift */,
+				D48076DD2CE33E8300E097A3 /* FactoryVIPERUITestsLaunchTests.swift */,
+			);
+			path = FactoryVIPERUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D48076BB2CE33E8200E097A3 /* FactoryVIPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48076E12CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPER" */;
+			buildPhases = (
+				D48076B82CE33E8200E097A3 /* Sources */,
+				D48076B92CE33E8200E097A3 /* Frameworks */,
+				D48076BA2CE33E8200E097A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FactoryVIPER;
+			productName = FactoryVIPER;
+			productReference = D48076BC2CE33E8200E097A3 /* FactoryVIPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D48076CC2CE33E8300E097A3 /* FactoryVIPERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48076E42CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPERTests" */;
+			buildPhases = (
+				D48076C92CE33E8300E097A3 /* Sources */,
+				D48076CA2CE33E8300E097A3 /* Frameworks */,
+				D48076CB2CE33E8300E097A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48076CF2CE33E8300E097A3 /* PBXTargetDependency */,
+			);
+			name = FactoryVIPERTests;
+			productName = FactoryVIPERTests;
+			productReference = D48076CD2CE33E8300E097A3 /* FactoryVIPERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D48076D62CE33E8300E097A3 /* FactoryVIPERUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48076E72CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPERUITests" */;
+			buildPhases = (
+				D48076D32CE33E8300E097A3 /* Sources */,
+				D48076D42CE33E8300E097A3 /* Frameworks */,
+				D48076D52CE33E8300E097A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48076D92CE33E8300E097A3 /* PBXTargetDependency */,
+			);
+			name = FactoryVIPERUITests;
+			productName = FactoryVIPERUITests;
+			productReference = D48076D72CE33E8300E097A3 /* FactoryVIPERUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D48076B42CE33E8200E097A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D48076BB2CE33E8200E097A3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D48076CC2CE33E8300E097A3 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D48076BB2CE33E8200E097A3;
+					};
+					D48076D62CE33E8300E097A3 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D48076BB2CE33E8200E097A3;
+					};
+				};
+			};
+			buildConfigurationList = D48076B72CE33E8200E097A3 /* Build configuration list for PBXProject "FactoryVIPER" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D48076B32CE33E8200E097A3;
+			productRefGroup = D48076BD2CE33E8200E097A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D48076BB2CE33E8200E097A3 /* FactoryVIPER */,
+				D48076CC2CE33E8300E097A3 /* FactoryVIPERTests */,
+				D48076D62CE33E8300E097A3 /* FactoryVIPERUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D48076BA2CE33E8200E097A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48076C82CE33E8300E097A3 /* Preview Assets.xcassets in Resources */,
+				D48076C42CE33E8300E097A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076CB2CE33E8300E097A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076D52CE33E8300E097A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D48076B82CE33E8200E097A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48076C22CE33E8200E097A3 /* ContentView.swift in Sources */,
+				D48076C02CE33E8200E097A3 /* FactoryVIPERApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076C92CE33E8300E097A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48076D22CE33E8300E097A3 /* FactoryVIPERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48076D32CE33E8300E097A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48076DE2CE33E8300E097A3 /* FactoryVIPERUITestsLaunchTests.swift in Sources */,
+				D48076DC2CE33E8300E097A3 /* FactoryVIPERUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D48076CF2CE33E8300E097A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48076BB2CE33E8200E097A3 /* FactoryVIPER */;
+			targetProxy = D48076CE2CE33E8300E097A3 /* PBXContainerItemProxy */;
+		};
+		D48076D92CE33E8300E097A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48076BB2CE33E8200E097A3 /* FactoryVIPER */;
+			targetProxy = D48076D82CE33E8300E097A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D48076DF2CE33E8300E097A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D48076E02CE33E8300E097A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D48076E22CE33E8300E097A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FactoryVIPER/FactoryVIPER.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FactoryVIPER/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D48076E32CE33E8300E097A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FactoryVIPER/FactoryVIPER.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FactoryVIPER/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D48076E52CE33E8300E097A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FactoryVIPER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FactoryVIPER";
+			};
+			name = Debug;
+		};
+		D48076E62CE33E8300E097A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FactoryVIPER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FactoryVIPER";
+			};
+			name = Release;
+		};
+		D48076E82CE33E8300E097A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FactoryVIPER;
+			};
+			name = Debug;
+		};
+		D48076E92CE33E8300E097A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y7626TS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsym.FactoryVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FactoryVIPER;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D48076B72CE33E8200E097A3 /* Build configuration list for PBXProject "FactoryVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48076DF2CE33E8300E097A3 /* Debug */,
+				D48076E02CE33E8300E097A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48076E12CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48076E22CE33E8300E097A3 /* Debug */,
+				D48076E32CE33E8300E097A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48076E42CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48076E52CE33E8300E097A3 /* Debug */,
+				D48076E62CE33E8300E097A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48076E72CE33E8300E097A3 /* Build configuration list for PBXNativeTarget "FactoryVIPERUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48076E82CE33E8300E097A3 /* Debug */,
+				D48076E92CE33E8300E097A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D48076B42CE33E8200E097A3 /* Project object */;
+}
