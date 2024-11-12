@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+//@main
 struct FactoryVIPERApp: App {
     var body: some Scene {
         WindowGroup {
