@@ -1,0 +1,10 @@
+// Server URL
+API_BASE_URL = https:/$()/www.staging.viper.com
+DEEPLINK_BASE_URL = viper-stag:/$()/
+
+// Keys
+API_KEY = 89dhdyd93380dkqmoe_hd830dhq
+
+// App Settings
+APP_NAME = VIPER Staging
+APP_BUNDLE_ID = com.appsym.viper.staging
