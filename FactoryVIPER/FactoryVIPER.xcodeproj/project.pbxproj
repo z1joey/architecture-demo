@@ -34,6 +34,12 @@
 		D48C96E72CE349AE00BE47FA /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96E62CE349AE00BE47FA /* SystemEventsHandler.swift */; };
 		D48C96E92CE349C300BE47FA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96E82CE349C300BE47FA /* AppState.swift */; };
 		D48C96EB2CE34CB400BE47FA /* Combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96EA2CE34CB400BE47FA /* Combine+.swift */; };
+		D48C96EF2CE3586C00BE47FA /* AppState+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96EE2CE3586400BE47FA /* AppState+Injection.swift */; };
+		D48C96F42CE35B4E00BE47FA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96F32CE35B4E00BE47FA /* SignInView.swift */; };
+		D48C96F82CE4995C00BE47FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96F72CE4995C00BE47FA /* HomeView.swift */; };
+		D48C96FD2CE4A0EC00BE47FA /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96F92CE4A0EC00BE47FA /* APICaller.swift */; };
+		D48C96FE2CE4A0EC00BE47FA /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */; };
+		D48C96FF2CE4A0EC00BE47FA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96FA2CE4A0EC00BE47FA /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,12 @@
 		D48C96E62CE349AE00BE47FA /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
 		D48C96E82CE349C300BE47FA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D48C96EA2CE34CB400BE47FA /* Combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+.swift"; sourceTree = "<group>"; };
+		D48C96EE2CE3586400BE47FA /* AppState+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+Injection.swift"; sourceTree = "<group>"; };
+		D48C96F32CE35B4E00BE47FA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		D48C96F72CE4995C00BE47FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D48C96F92CE4A0EC00BE47FA /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		D48C96FA2CE4A0EC00BE47FA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,8 @@
 		D48076BE2CE33E8200E097A3 /* FactoryVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D48C96FC2CE4A0EC00BE47FA /* Networking */,
+				D48C96F02CE35B1E00BE47FA /* Features */,
 				D48C96E52CE3498C00BE47FA /* System */,
 				D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */,
 				D48076C12CE33E8200E097A3 /* ContentView.swift */,
@@ -213,12 +227,32 @@
 			isa = PBXGroup;
 			children = (
 				D48C96E82CE349C300BE47FA /* AppState.swift */,
+				D48C96EE2CE3586400BE47FA /* AppState+Injection.swift */,
 				D48C96E12CE3495800BE47FA /* AppDelegate.swift */,
 				D48C96E22CE3495800BE47FA /* SceneDelegate.swift */,
 				D48C96E62CE349AE00BE47FA /* SystemEventsHandler.swift */,
 				D48C96EA2CE34CB400BE47FA /* Combine+.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		D48C96F02CE35B1E00BE47FA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D48C96F32CE35B4E00BE47FA /* SignInView.swift */,
+				D48C96F72CE4995C00BE47FA /* HomeView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D48C96FC2CE4A0EC00BE47FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D48C96F92CE4A0EC00BE47FA /* APICaller.swift */,
+				D48C96FA2CE4A0EC00BE47FA /* APIRequest.swift */,
+				D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,14 +397,20 @@
 				D48C96D62CE3490E00BE47FA /* Locking.swift in Sources */,
 				D48C96D72CE3490E00BE47FA /* Factory.swift in Sources */,
 				D48C96D82CE3490E00BE47FA /* Resolutions.swift in Sources */,
+				D48C96EF2CE3586C00BE47FA /* AppState+Injection.swift in Sources */,
 				D48C96D92CE3490E00BE47FA /* Resolver.swift in Sources */,
 				D48C96E92CE349C300BE47FA /* AppState.swift in Sources */,
 				D48C96DA2CE3490E00BE47FA /* Globals.swift in Sources */,
+				D48C96F42CE35B4E00BE47FA /* SignInView.swift in Sources */,
 				D48C96E72CE349AE00BE47FA /* SystemEventsHandler.swift in Sources */,
 				D48C96DB2CE3490E00BE47FA /* Aliases.swift in Sources */,
 				D48C96DC2CE3490E00BE47FA /* Injections.swift in Sources */,
 				D48C96DD2CE3490E00BE47FA /* Modifiers.swift in Sources */,
 				D48C96DE2CE3490E00BE47FA /* Registrations.swift in Sources */,
+				D48C96F82CE4995C00BE47FA /* HomeView.swift in Sources */,
+				D48C96FD2CE4A0EC00BE47FA /* APICaller.swift in Sources */,
+				D48C96FE2CE4A0EC00BE47FA /* HTTP.swift in Sources */,
+				D48C96FF2CE4A0EC00BE47FA /* APIRequest.swift in Sources */,
 				D48C96DF2CE3490E00BE47FA /* Scopes.swift in Sources */,
 				D48C96E02CE3490E00BE47FA /* Contexts.swift in Sources */,
 			);

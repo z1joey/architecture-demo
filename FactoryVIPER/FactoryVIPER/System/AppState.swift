@@ -1,3 +1,8 @@
+import SwiftUI
+import Combine
+
+typealias AppStateSubject = CurrentValueSubject<AppState, Never>
+
 struct AppState: Equatable {
     var user = UserData()
     var system = System()
@@ -19,21 +24,7 @@ extension AppState {
 }
 
 extension AppState {
-    struct ViewRouting: Equatable {}
-}
-
-import SwiftUI
-import Combine
-
-typealias AppStateSubject = CurrentValueSubject<AppState, Never>
-
-struct AppStateKey: EnvironmentKey {
-    static var defaultValue: AppStateSubject = .init(AppState())
-}
-
-extension EnvironmentValues {
-    var appState: AppStateSubject {
-        get { self[AppStateKey.self] }
-        set { self[AppStateKey.self] = newValue }
+    struct ViewRouting: Equatable {
+        var signIn: SignInView.Routing = .init()
     }
 }
