@@ -5,5 +5,13 @@ extension HomeView {
         var user: AnyPublisher<GitHubUser, Never> {
             appState.get(\.user.user).compactMap { $0 }.eraseToAnyPublisher()
         }
+
+        func changeSchemeTapped() {
+            if colorScheme is DefaultColorScheme {
+                appState.value.user.color = NewMoneyScheme()
+            } else {
+                appState.value.user.color = DefaultColorScheme()
+            }
+        }
     }
 }

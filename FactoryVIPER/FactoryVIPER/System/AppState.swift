@@ -12,6 +12,14 @@ struct AppState: Equatable {
 extension AppState {
     struct UserData: Equatable {
         var user: GitHubUser?
+        var color: any ColorScheme = DefaultColorScheme()
+
+        static func == (lhs: UserData, rhs: UserData) -> Bool {
+            lhs.user == rhs.user
+            && lhs.color.backgroundColor == rhs.color.backgroundColor
+            && lhs.color.textPrimaryColor == rhs.color.textPrimaryColor
+            && lhs.color.textSecondaryColor == rhs.color.textSecondaryColor
+        }
     }
 }
 

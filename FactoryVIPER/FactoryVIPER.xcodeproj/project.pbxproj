@@ -46,6 +46,7 @@
 		D48C97112CE4A6A400BE47FA /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97102CE4A69E00BE47FA /* BaseInteractor.swift */; };
 		D48C97142CE4AA4800BE47FA /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97132CE4AA4300BE47FA /* RootInteractor.swift */; };
 		D48C97162CE4AA7C00BE47FA /* RootRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97152CE4AA7900BE47FA /* RootRouting.swift */; };
+		D48C97182CE4CF7100BE47FA /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97172CE4CF6B00BE47FA /* ColorScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D48C97102CE4A69E00BE47FA /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		D48C97132CE4AA4300BE47FA /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		D48C97152CE4AA7900BE47FA /* RootRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouting.swift; sourceTree = "<group>"; };
+		D48C97172CE4CF6B00BE47FA /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				D48C96E82CE349C300BE47FA /* AppState.swift */,
+				D48C97172CE4CF6B00BE47FA /* ColorScheme.swift */,
 				D48C96EE2CE3586400BE47FA /* AppState+Injection.swift */,
 				D48C96E12CE3495800BE47FA /* AppDelegate.swift */,
 				D48C96E22CE3495800BE47FA /* SceneDelegate.swift */,
@@ -469,6 +472,7 @@
 				D48C96FF2CE4A0EC00BE47FA /* APIRequest.swift in Sources */,
 				D48C96DF2CE3490E00BE47FA /* Scopes.swift in Sources */,
 				D48C96E02CE3490E00BE47FA /* Contexts.swift in Sources */,
+				D48C97182CE4CF7100BE47FA /* ColorScheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

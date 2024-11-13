@@ -17,14 +17,25 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            if let user {
-                Text("Hello, \(user.login)")
-                Text(user.bio)
-            } else {
-                Text("Oops, something went wrong.")
+            Group {
+                if let user {
+                    Text("Hello, \(user.login)")
+                    Text(user.bio)
+                } else {
+                    Text("Oops, something went wrong.")
+                }
             }
+
+            Button {
+                interactor.changeSchemeTapped()
+            } label: {
+                Text("Change Colors")
+            }
+
         }
+        .padding()
         .onReceive(interactor.user) { user = $0 }
+        .background(interactor.colorScheme.backgroundColor)
     }
 }
 
