@@ -1,7 +1,7 @@
 import UIKit
 import Combine
 
-protocol SystemEventsHandling {
+protocol SystemEventsHandler {
     func sceneOpenURLContexts(_ urlContexts: Set<UIOpenURLContext>)
     func sceneDidBecomeActive()
     func sceneWillResignActive()
@@ -9,7 +9,7 @@ protocol SystemEventsHandling {
     func appDidReceiveRemoteNotification(payload: [AnyHashable: Any], fetchCompletion: @escaping (UIBackgroundFetchResult) -> Void)
 }
 
-class SystemEventsHandler: SystemEventsHandling {
+class RealSystemEventsHandler: SystemEventsHandler {
     private let appState: AppStateSubject
     private var cancelBag = CancelBag()
 
@@ -18,7 +18,7 @@ class SystemEventsHandler: SystemEventsHandling {
 
         Publishers
             .CombineLatest(
-                appState.get(\.user.token).compactMap { $0 },
+                appState.get(\.user.user).compactMap { $0 },
                 appState.get(\.system.unhandledDeeplinks).filter { !$0.isEmpty }
             )
             .sink { (_, urls) in
@@ -55,5 +55,11 @@ class SystemEventsHandler: SystemEventsHandling {
 
     func appDidReceiveRemoteNotification(payload: [AnyHashable : Any], fetchCompletion: @escaping (UIBackgroundFetchResult) -> Void) {
         print("appDidReceiveRemoteNotification")
+    }
+}
+
+extension Container {
+    var systemEventHandler: Factory<RealSystemEventsHandler> {
+        self { RealSystemEventsHandler(appState: self.appState.resolve()) }
     }
 }

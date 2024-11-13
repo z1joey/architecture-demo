@@ -11,7 +11,7 @@ struct AppState: Equatable {
 
 extension AppState {
     struct UserData: Equatable {
-        var token: String?
+        var user: GitHubUser?
     }
 }
 
@@ -25,6 +25,6 @@ extension AppState {
 
 extension AppState {
     struct ViewRouting: Equatable {
-        var signIn: SignInView.Routing = .init()
+        var root: RootView.Routing = .init()
     }
 }

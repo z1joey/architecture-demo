@@ -3,7 +3,7 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    var systemEventsHandler: SystemEventsHandling?
+    var systemEventsHandler: RealSystemEventsHandler?
 
     private let appState: AppStateSubject = .init(AppState())
 
@@ -13,14 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
-//            let (context, systemEventHandler) = AppContext.build(withAppState: appState)
-//            let view = RootView(presenter: .init(context: context))
-//
-//            window.rootViewController = UIHostingController(rootView: view)
-//            window.makeKeyAndVisible()
-//
-//            self.systemEventsHandler = systemEventHandler
-//            self.window = window
+            let view = RootView()
+
+            window.rootViewController = UIHostingController(rootView: view)
+            window.makeKeyAndVisible()
+
+            self.systemEventsHandler = Container.shared.systemEventHandler.resolve()
+            self.window = window
         }
 
         if let shortcutItem = connectionOptions.shortcutItem,

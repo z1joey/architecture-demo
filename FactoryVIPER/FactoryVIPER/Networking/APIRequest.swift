@@ -23,3 +23,16 @@ extension APIRequest {
         return request
     }
 }
+
+extension URLSession {
+    static var configured: URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForResource = 60
+        configuration.waitsForConnectivity = true
+        configuration.httpMaximumConnectionsPerHost = 5
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        configuration.urlCache = .shared
+        return URLSession(configuration: configuration)
+    }
+}

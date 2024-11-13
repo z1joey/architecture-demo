@@ -2,7 +2,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    lazy var systemEventsHandler: SystemEventsHandling? = {
+    lazy var systemEventsHandler: RealSystemEventsHandler? = {
         self.systemEventsHandler(UIApplication.shared)
     }()
 
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private extension AppDelegate {
-    func systemEventsHandler(_ application: UIApplication) -> SystemEventsHandling? {
+    func systemEventsHandler(_ application: UIApplication) -> RealSystemEventsHandler? {
         return sceneDelegate(application)?.systemEventsHandler
     }
 

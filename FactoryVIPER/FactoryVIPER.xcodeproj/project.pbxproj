@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D48076C02CE33E8200E097A3 /* FactoryVIPERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */; };
-		D48076C22CE33E8200E097A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076C12CE33E8200E097A3 /* ContentView.swift */; };
+		D48076C22CE33E8200E097A3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076C12CE33E8200E097A3 /* RootView.swift */; };
 		D48076C42CE33E8300E097A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48076C32CE33E8300E097A3 /* Assets.xcassets */; };
 		D48076C82CE33E8300E097A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48076C72CE33E8300E097A3 /* Preview Assets.xcassets */; };
 		D48076D22CE33E8300E097A3 /* FactoryVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48076D12CE33E8300E097A3 /* FactoryVIPERTests.swift */; };
@@ -40,6 +39,13 @@
 		D48C96FD2CE4A0EC00BE47FA /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96F92CE4A0EC00BE47FA /* APICaller.swift */; };
 		D48C96FE2CE4A0EC00BE47FA /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */; };
 		D48C96FF2CE4A0EC00BE47FA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C96FA2CE4A0EC00BE47FA /* APIRequest.swift */; };
+		D48C97042CE4A1C100BE47FA /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97032CE4A1B700BE47FA /* SignInInteractor.swift */; };
+		D48C97082CE4A23700BE47FA /* SignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97072CE4A23400BE47FA /* SignInProvider.swift */; };
+		D48C970B2CE4A29200BE47FA /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97092CE4A29200BE47FA /* GitHubUser.swift */; };
+		D48C970D2CE4A54E00BE47FA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C970C2CE4A54A00BE47FA /* HomeInteractor.swift */; };
+		D48C97112CE4A6A400BE47FA /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97102CE4A69E00BE47FA /* BaseInteractor.swift */; };
+		D48C97142CE4AA4800BE47FA /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97132CE4AA4300BE47FA /* RootInteractor.swift */; };
+		D48C97162CE4AA7C00BE47FA /* RootRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C97152CE4AA7900BE47FA /* RootRouting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +67,7 @@
 
 /* Begin PBXFileReference section */
 		D48076BC2CE33E8200E097A3 /* FactoryVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVIPERApp.swift; sourceTree = "<group>"; };
-		D48076C12CE33E8200E097A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D48076C12CE33E8200E097A3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D48076C32CE33E8300E097A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48076C52CE33E8300E097A3 /* FactoryVIPER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FactoryVIPER.entitlements; sourceTree = "<group>"; };
 		D48076C72CE33E8300E097A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -97,6 +102,13 @@
 		D48C96F92CE4A0EC00BE47FA /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		D48C96FA2CE4A0EC00BE47FA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		D48C97032CE4A1B700BE47FA /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		D48C97072CE4A23400BE47FA /* SignInProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProvider.swift; sourceTree = "<group>"; };
+		D48C97092CE4A29200BE47FA /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		D48C970C2CE4A54A00BE47FA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		D48C97102CE4A69E00BE47FA /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		D48C97132CE4AA4300BE47FA /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		D48C97152CE4AA7900BE47FA /* RootRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,11 +159,10 @@
 		D48076BE2CE33E8200E097A3 /* FactoryVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D48C970A2CE4A29200BE47FA /* Entity */,
 				D48C96FC2CE4A0EC00BE47FA /* Networking */,
 				D48C96F02CE35B1E00BE47FA /* Features */,
 				D48C96E52CE3498C00BE47FA /* System */,
-				D48076BF2CE33E8200E097A3 /* FactoryVIPERApp.swift */,
-				D48076C12CE33E8200E097A3 /* ContentView.swift */,
 				D48076C32CE33E8300E097A3 /* Assets.xcassets */,
 				D48076C52CE33E8300E097A3 /* FactoryVIPER.entitlements */,
 				D48C96C02CE348E100BE47FA /* Vendor */,
@@ -239,8 +250,10 @@
 		D48C96F02CE35B1E00BE47FA /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D48C96F32CE35B4E00BE47FA /* SignInView.swift */,
-				D48C96F72CE4995C00BE47FA /* HomeView.swift */,
+				D48C97102CE4A69E00BE47FA /* BaseInteractor.swift */,
+				D48C97122CE4AA3800BE47FA /* Root */,
+				D48C97022CE4A1A700BE47FA /* Home */,
+				D48C97012CE4A19E00BE47FA /* SignIn */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -253,6 +266,43 @@
 				D48C96FB2CE4A0EC00BE47FA /* HTTP.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D48C97012CE4A19E00BE47FA /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D48C97072CE4A23400BE47FA /* SignInProvider.swift */,
+				D48C97032CE4A1B700BE47FA /* SignInInteractor.swift */,
+				D48C96F32CE35B4E00BE47FA /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		D48C97022CE4A1A700BE47FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D48C970C2CE4A54A00BE47FA /* HomeInteractor.swift */,
+				D48C96F72CE4995C00BE47FA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D48C970A2CE4A29200BE47FA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D48C97092CE4A29200BE47FA /* GitHubUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D48C97122CE4AA3800BE47FA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D48C97152CE4AA7900BE47FA /* RootRouting.swift */,
+				D48C97132CE4AA4300BE47FA /* RootInteractor.swift */,
+				D48076C12CE33E8200E097A3 /* RootView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,22 +436,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48076C22CE33E8200E097A3 /* ContentView.swift in Sources */,
+				D48076C22CE33E8200E097A3 /* RootView.swift in Sources */,
 				D48C96EB2CE34CB400BE47FA /* Combine+.swift in Sources */,
-				D48076C02CE33E8200E097A3 /* FactoryVIPERApp.swift in Sources */,
 				D48C96D32CE3490E00BE47FA /* Key.swift in Sources */,
 				D48C96D42CE3490E00BE47FA /* Containers.swift in Sources */,
 				D48C96E32CE3495800BE47FA /* AppDelegate.swift in Sources */,
 				D48C96E42CE3495800BE47FA /* SceneDelegate.swift in Sources */,
 				D48C96D52CE3490E00BE47FA /* Factory.docc in Sources */,
+				D48C97082CE4A23700BE47FA /* SignInProvider.swift in Sources */,
+				D48C97142CE4AA4800BE47FA /* RootInteractor.swift in Sources */,
 				D48C96D62CE3490E00BE47FA /* Locking.swift in Sources */,
+				D48C970B2CE4A29200BE47FA /* GitHubUser.swift in Sources */,
 				D48C96D72CE3490E00BE47FA /* Factory.swift in Sources */,
 				D48C96D82CE3490E00BE47FA /* Resolutions.swift in Sources */,
 				D48C96EF2CE3586C00BE47FA /* AppState+Injection.swift in Sources */,
+				D48C97042CE4A1C100BE47FA /* SignInInteractor.swift in Sources */,
+				D48C97162CE4AA7C00BE47FA /* RootRouting.swift in Sources */,
+				D48C97112CE4A6A400BE47FA /* BaseInteractor.swift in Sources */,
 				D48C96D92CE3490E00BE47FA /* Resolver.swift in Sources */,
 				D48C96E92CE349C300BE47FA /* AppState.swift in Sources */,
 				D48C96DA2CE3490E00BE47FA /* Globals.swift in Sources */,
 				D48C96F42CE35B4E00BE47FA /* SignInView.swift in Sources */,
+				D48C970D2CE4A54E00BE47FA /* HomeInteractor.swift in Sources */,
 				D48C96E72CE349AE00BE47FA /* SystemEventsHandler.swift in Sources */,
 				D48C96DB2CE3490E00BE47FA /* Aliases.swift in Sources */,
 				D48C96DC2CE3490E00BE47FA /* Injections.swift in Sources */,
