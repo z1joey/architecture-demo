@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FactoryVIPER/FactoryVIPER.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VIPER/VIPER.xcodeproj">
    </FileRef>
    <FileRef
